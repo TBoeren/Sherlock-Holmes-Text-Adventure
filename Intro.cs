@@ -11,8 +11,9 @@ namespace Sherlock_Holmes_Text_Adventure
     {
         public Intro(Label IntroLabel)
         {
-            string IntroText = System.IO.File.ReadAllText("D:/Thijs Huiswerk/Sherlock Holmes Text Adventures/Sherlock Holmes Text Adventure/Resources/Intro.txt", Encoding.Default);
-            IntroLabel.Text = IntroText;
+            //Get the intro text from the resources folder and print it on the introtab
+            ExternalFileManager FileManager = new ExternalFileManager();
+            IntroLabel.Text = FileManager.ReadTextFile("Intro.txt");
         }
     }
 }

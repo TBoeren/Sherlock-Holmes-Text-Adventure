@@ -26,38 +26,11 @@ namespace Sherlock_Holmes_Text_Adventure
             ButtonPanel = BPanel;
             CaseLocations = CaseDB;
             CaseNotes = notes;
+            ExternalFileManager FileManager = new ExternalFileManager();
 
             CreateLetterButtons();
-            ConvertCSVFileToDatatable("D:/Thijs Huiswerk/Sherlock Holmes Text Adventures/Sherlock Holmes Text Adventure/Resources/London Directory.csv", DirectoryDatatable);
-            ConvertCSVFileToDatatable("D:/Thijs Huiswerk/Sherlock Holmes Text Adventures/Sherlock Holmes Text Adventure/Resources/London Directory Catagories.csv", DirectoryCatagoriesDatatable);
-        }
-
-        void ConvertCSVFileToDatatable(string Filepath, DataTable DataTableToStore)
-        {
-            //Get the lines from the CSV
-            string[] Lines = File.ReadAllLines(Filepath, Encoding.Default);
-            string[] Fields;
-            Fields = Lines[0].Split(new char[] { ';' });
-            int Cols = Fields.GetLength(0);
-
-            //1st row must be column names; force lower case to ensure matching later on.
-            for (int i = 0; i < Cols; i++)
-            {
-                DataTableToStore.Columns.Add(Fields[i].ToLower(), typeof(string));
-            }
-
-            //Add the rows to the datatable
-            DataRow Row;
-            for (int i = 1; i < Lines.GetLength(0); i++)
-            {
-                Fields = Lines[i].Split(new char[] { ';' });
-                Row = DataTableToStore.NewRow();
-                for (int f = 0; f < Cols; f++)
-                {
-                    Row[f] = Fields[f];
-                }
-                DataTableToStore.Rows.Add(Row);
-            }
+            DirectoryDatatable = FileManager.ConvertCSVToDatatable("London Directory.csv");
+            DirectoryCatagoriesDatatable = FileManager.ConvertCSVToDatatable("London Directory Catagories.csv");
         }
 
         void CreateLetterButtons()

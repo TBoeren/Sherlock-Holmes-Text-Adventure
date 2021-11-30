@@ -13,36 +13,8 @@ namespace Sherlock_Holmes_Text_Adventure
 
         public CaseLocationDatabase()
         {
-            ConvertCSVToDatatable("D:/Thijs Huiswerk/Sherlock Holmes Text Adventures/Sherlock Holmes Text Adventure/Resources/SherlockLocations.csv", CaseLocationsDatatable);
-        }
-
-        void ConvertCSVToDatatable(string Filepath, DataTable DataTableToStore)
-        {
-            //Get the lines from the CSV
-            string[] Lines = File.ReadAllLines(Filepath,Encoding.Default);
-            string[] Fields;
-            Fields = Lines[0].Split(new char[] { ';' });
-            int Cols = Fields.GetLength(0);
-
-            //1st row must be column names; force lower case to ensure matching later on.
-            for (int i = 0; i < Cols; i++)
-            {
-                DataTableToStore.Columns.Add(Fields[i].ToLower(), typeof(string));
-            }
-
-            //Add the rows
-            DataRow Row;
-            for (int i = 1; i < Lines.GetLength(0); i++)
-            {
-                Fields = Lines[i].Split(new char[] { ';' });
-                Row = DataTableToStore.NewRow();
-                for (int f = 0; f < Cols; f++)
-                {
-                    Fields[f] = Fields[f].Replace("@", System.Environment.NewLine);
-                    Row[f] = Fields[f];
-                }
-                DataTableToStore.Rows.Add(Row);
-            }
+            ExternalFileManager FilesManager = new ExternalFileManager();
+            CaseLocationsDatatable = FilesManager.ConvertCSVToDatatable("SherlockLocations.csv");
         }
 
         public string[] FindLocationArray(string Location)

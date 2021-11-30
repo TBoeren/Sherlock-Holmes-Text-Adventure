@@ -111,12 +111,88 @@ namespace Sherlock_Holmes_Text_Adventure.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to We knock at 221B Baker Street, and to our greatest surprise, Holmes himself answers the door. “Ah, you arrive at the best possible moment: you are expected in the kitchen. I&apos;ll be fair play, Wiggins, I&apos;ll let you get a head start to solve this case which, on the whole, is rather banal…&quot; We hear Watson&apos;s wrathful voice coming from the kitchen: “None of this is a game, you can&apos;t leave like this!&quot; “Watch me!&quot; replies a jolly Holmes, going down the few stairs separating him from the street, leaving us alone on  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Intro {
+            get {
+                return ResourceManager.GetString("Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Lomax {
             get {
                 object obj = ResourceManager.GetObject("Lomax", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NAME;ADDRESS
+        ///A. A. Goldsmith;93NW
+        ///A. B. Cahn &amp; Co;20E
+        ///A. B. Muirhead;41EC
+        ///A. Marx &amp; Co;36SE
+        ///A. W. Faber;29EC
+        ///Aaron, Andrew;1E
+        ///Abbott, Ruth;38NW
+        ///Abbott, Walter;38NW
+        ///Aberdeen Navigation Co;26EC
+        ///Abernathy, Elmer;86SE
+        ///Abernathy, Graham;5E
+        ///Abrahams, O.L.D.;75SE
+        ///Abramoff, Nicoli;20E
+        ///Ackerman, L;5SE
+        ///Acorn, Philbert;30E
+        ///Acree, Joseph;47EC
+        ///Adair, Hilda;59NW
+        ///Adair, M;59NW
+        ///Adair, Ronald;59NW
+        ///Adam, Sir Henry;1SW
+        ///Adams, Harmon;43NW
+        ///Adelaide-Southampton Line;15E
+        ///Admiralty, The;10SW
+        ///Adrian, Adrian; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string London_Directory {
+            get {
+                return ResourceManager.GetString("London_Directory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NAME;ADDRESS
+        ///AUCTION HOUSES;
+        ///Armitage’s Gallery;21NW
+        ///Bonham’s;12NW
+        ///Christie’s;87SW
+        ///Gartling’s Art Salon;75WC
+        ///Sotheby’s;78NW
+        ///BANKS;
+        ///Bank of England;23EC
+        ///Capital &amp; Counties;75NW
+        ///City &amp; Suburban;72EC
+        ///Continental Bank;68WC
+        ///Cox &amp; Co;22WC
+        ///Credit Lyonnais;60SW
+        ///Drummond’s Bank;26WC
+        ///Holder &amp; Stevenson;69EC
+        ///Sylvester’s;84EC
+        ///Worthingdon Bank;67NW
+        ///BARRISTERS;
+        ///Attard, Charles;34EC
+        ///Bakersfield, Woodward;21NW
+        ///Faversham, F.V;32WC
+        ///Hall, Edward;36EC
+        ///Krantz, Herbert;72WC
+        ///Mason, Cecil;92EC
+        ///Nast, Flaviu [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string London_Directory_Catagories {
+            get {
+                return ResourceManager.GetString("London_Directory_Catagories", resourceCulture);
             }
         }
         
@@ -192,8 +268,11 @@ namespace Sherlock_Holmes_Text_Adventure.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to Inhabitant;Location;Information
-        ///Sherlock Holmes (Insulting Detective);42 NW;Hello Wiggins
-        ///.
+        ///Sherlock Holmes (Consulting Detective);42NW;“Come now Wiggins, you can solve this case on your own&quot;
+        ///Lomax (Librarian);5SW;&quot;Sorry Wiggins I don&apos;t think I can be of much help to you&quot;
+        ///Central Carriage Depot;5WC;&quot;Sorry Wiggins I don&apos;t think I can be of much help to you&quot;
+        ///Sir Jasper Meeks (Medical Examiner);38EC;&quot;Sorry Wiggins I don&apos;t think I can be of much help to you&quot;
+        ///Langdale Pike (Social Columnist);2SW;&quot;Pike receives us in the visitors sitting-room: “Oppenheimer was alread [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SherlockLocations {
             get {

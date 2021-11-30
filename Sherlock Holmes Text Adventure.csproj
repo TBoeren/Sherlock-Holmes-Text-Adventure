@@ -59,6 +59,8 @@
     </Compile>
     <Compile Include="Directory.cs" />
     <Compile Include="CaseLocationDatabase.cs" />
+    <Compile Include="ExternalFileManager.cs" />
+    <Compile Include="IExternalFilesManager.cs" />
     <Compile Include="Intro.cs" />
     <Compile Include="NotesLabel.cs">
       <SubType>Component</SubType>
@@ -113,7 +115,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\SherlockLocations.csv" />
+    <None Include="Resources\London Directory Catagories.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\London Directory.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\SherlockLocations.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -159,6 +169,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Porky.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Intro.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
