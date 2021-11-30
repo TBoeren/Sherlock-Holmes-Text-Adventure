@@ -19,18 +19,36 @@ namespace Sherlock_Holmes_Text_Adventure
         private Dictionary<string, string> CurrentlyLetterDirectory = new Dictionary<string, string>();
         private CaseLocationDatabase CaseLocations;
         private Notes CaseNotes;
+        private ComboBox DropdownNumbers;
+        private ComboBox DropdownDistricts;
 
-        public Directory(DBLayoutPanel DPanel, DBLayoutPanel BPanel, CaseLocationDatabase CaseDB, Notes notes)
+        public Directory(DBLayoutPanel DPanel, DBLayoutPanel BPanel, CaseLocationDatabase CaseDB, Notes notes, ComboBox Numbers, ComboBox Districts)
         {
             DirectoryPanel = DPanel;
             ButtonPanel = BPanel;
             CaseLocations = CaseDB;
             CaseNotes = notes;
             ExternalFileManager FileManager = new ExternalFileManager();
+            DropdownNumbers = Numbers;
+            DropdownDistricts = Districts;
 
+            SetupManualTravel();
             CreateLetterButtons();
             DirectoryDatatable = FileManager.ConvertCSVToDatatable("London Directory.csv");
             DirectoryCatagoriesDatatable = FileManager.ConvertCSVToDatatable("London Directory Catagories.csv");
+        }
+
+        private void SetupManualTravel()
+        {
+            //Add the numbers 1-100
+            for (int i = 1; i <= 100; i++)
+            {
+                DropdownNumbers.Items.Add(i);
+            }
+
+            //Set the start index so the dropdowns aren't blank
+            DropdownNumbers.SelectedIndex = 0;
+            DropdownDistricts.SelectedIndex = 0;
         }
 
         void CreateLetterButtons()
@@ -56,7 +74,7 @@ namespace Sherlock_Holmes_Text_Adventure
             ButtonPanel.ResumeLayout();
         }
 
-        public void UpdateDirectory(string[] RowElements)
+        void UpdateDirectory(string[] RowElements)
         {
             DirectoryPanel.SuspendLayout();
 
@@ -75,7 +93,7 @@ namespace Sherlock_Holmes_Text_Adventure
                 if (CurrentlyLetterDirectory.ContainsKey(RowElements[i]))
                 {
                     //For the catagories, make them stand out
-                    if (RowElements[i+1] == "")
+                    if (RowElements[i + 1] == "")
                     {
                         LocationLabel.BackColor = Color.Black;
                         LocationLabel.ForeColor = Color.White;
@@ -96,7 +114,7 @@ namespace Sherlock_Holmes_Text_Adventure
                     }
 
                     LocationLabel.SetLocationID(RowElements[i]);
-                    LocationLabel.SetLocationName(RowElements[i-1]);
+                    LocationLabel.SetLocationName(RowElements[i - 1]);
                     DirectoryPanel.Controls.Add(LocationLabel, i, DirectoryPanel.RowCount);
                 }
             }
@@ -104,7 +122,6 @@ namespace Sherlock_Holmes_Text_Adventure
             DirectoryPanel.RowCount = DirectoryPanel.Controls.Count;
             DirectoryPanel.ResumeLayout();
         }
-
 
         void ClearDictonaryLayout()
         {
@@ -149,6 +166,29 @@ namespace Sherlock_Holmes_Text_Adventure
             return Names.ToArray();
         }
 
+        string[] GetNamesWithLocation(string Location)
+        {
+            List<string> Names = new List<string>();
+            BindingSource DatatableBindingSource = new BindingSource();
+            DatatableBindingSource.DataSource = DirectoryDatatable;
+
+            DatatableBindingSource.Filter = "address like" + "'" + Location + "%'";
+            if (DatatableBindingSource.Count > 0)
+            {
+                DataRowView Row = (DataRowView)DatatableBindingSource[0];
+                Names.Add(Row["name"].ToString());
+                Names.Add(Row["address"].ToString());
+                Names.Add("You find nothing of interest");
+                DatatableBindingSource.RemoveFilter();
+                return Names.ToArray();
+            }
+            else
+            {
+                DatatableBindingSource.RemoveFilter();
+                return new string[0];
+            }
+        }
+
         string[] GetDirectoryCatagories()
         {
             List<string> Names = new List<string>();
@@ -176,7 +216,7 @@ namespace Sherlock_Holmes_Text_Adventure
             NotesLabel SelectedLabel = (NotesLabel)sender;
             string[] LocationInfo = CaseLocations.FindLocationArray(SelectedLabel.GetLocationID());
 
-            if(LocationInfo.Length > 0)
+            if (LocationInfo.Length > 0)
             {
                 CaseNotes.StoreNotes(LocationInfo);
             }
@@ -187,9 +227,9 @@ namespace Sherlock_Holmes_Text_Adventure
                 if (SelectedLabel.GetLocationID() != "")
                 {
                     //Add the Name, the location and the info from the location and store it in the notes
-                    IrrelevantLocationInfo.Add(SelectedLabel.GetLocationName());    
-                    IrrelevantLocationInfo.Add(SelectedLabel.GetLocationID());      
-                    IrrelevantLocationInfo.Add("You find nothing of interest");    
+                    IrrelevantLocationInfo.Add(SelectedLabel.GetLocationName());
+                    IrrelevantLocationInfo.Add(SelectedLabel.GetLocationID());
+                    IrrelevantLocationInfo.Add("You find nothing of interest");
                     CaseNotes.StoreNotes(IrrelevantLocationInfo.ToArray());
                 }
             }
@@ -207,6 +247,32 @@ namespace Sherlock_Holmes_Text_Adventure
         {
             ClearDictonaryLayout();
             UpdateDirectory(GetDirectoryCatagories());
+        }
+
+        public void OnManualTravelButtonPressed(object sender, EventArgs e)
+        {
+            //Get the set travel location
+            string TravelLocation = (DropdownNumbers.Text + DropdownDistricts.Text);
+
+            //Check the case locations if it is relevant. Otherwise check the dictionary
+            string[] LocationInfo = CaseLocations.FindLocationArray(TravelLocation);
+
+            if (LocationInfo.Length > 0)
+            {
+                CaseNotes.StoreNotes(LocationInfo);
+            }
+            else
+            {
+                string[] IrrelevantLocationInfo = GetNamesWithLocation(TravelLocation);
+                if (IrrelevantLocationInfo.Length > 0)
+                {
+                    CaseNotes.StoreNotes(IrrelevantLocationInfo);
+                }
+                else
+                {
+                    MessageBox.Show("This location does not exist");
+                }      
+            }
         }
     }
 }

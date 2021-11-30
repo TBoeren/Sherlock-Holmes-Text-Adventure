@@ -23,7 +23,8 @@ namespace Sherlock_Holmes_Text_Adventure
             LocationFinder = new CaseLocationDatabase();
             InformantsTab = new Informants(tableLayoutPanel3, LocationFinder);
             NotesTab = new Notes(dbLayoutPanel27, label35);
-            DirectoryTab = new Directory(dbLayoutPanel30,dbLayoutPanel31, LocationFinder, NotesTab);
+            DirectoryTab = new Directory(dbLayoutPanel30,dbLayoutPanel31, LocationFinder, NotesTab, comboBox1, comboBox2);
+
             //Resize the tabs to fit properly
             Menu_Resize(null, null);
         }
@@ -89,6 +90,11 @@ namespace Sherlock_Holmes_Text_Adventure
         private void DirectoryCatagoryButton_Click(object sender, EventArgs e)
         {
             DirectoryTab.OnCatagoryButtonPressed(sender, e);
+        }
+
+        private void ManualTravelButton_Click(object sender, EventArgs e)
+        {
+            DirectoryTab.OnManualTravelButtonPressed(sender, e);
         }
     }
 }
