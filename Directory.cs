@@ -58,7 +58,9 @@ namespace Sherlock_Holmes_Text_Adventure
 
             for (int i = 0; i < Alphabet.Length; i++)
             {
-                DirectoryButton LetterButton = new DirectoryButton();
+                Button LetterButton = new Button();
+                LetterButton.Margin = new Padding(0, 0, 0, 0);
+                LetterButton.Dock = DockStyle.Fill;
                 LetterButton.Text = Alphabet[i].ToString();
                 LetterButton.Click += OnLetterButtonPressed;
 
@@ -237,7 +239,7 @@ namespace Sherlock_Holmes_Text_Adventure
 
         void OnLetterButtonPressed(object sender, EventArgs e)
         {
-            DirectoryButton SelectedButton = (DirectoryButton)sender;
+            Button SelectedButton = (Button)sender;
 
             ClearDictonaryLayout();
             UpdateDirectory(GetNamesWithLetter(SelectedButton.Text));

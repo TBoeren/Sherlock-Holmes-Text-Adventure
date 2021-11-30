@@ -51,12 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DirectoryButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DirectoryButton.Designer.cs">
-      <DependentUpon>DirectoryButton.cs</DependentUpon>
-    </Compile>
     <Compile Include="Directory.cs" />
     <Compile Include="CaseLocationDatabase.cs" />
     <Compile Include="ExternalFileManager.cs" />

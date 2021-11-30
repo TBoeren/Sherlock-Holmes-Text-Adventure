@@ -45,7 +45,12 @@
             this.label37 = new System.Windows.Forms.Label();
             this.dbLayoutPanel29 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.dbLayoutPanel31 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
-            this.directoryButton1 = new Sherlock_Holmes_Text_Adventure.DirectoryButton();
+            this.directoryButton1 = new System.Windows.Forms.Button();
+            this.dbLayoutPanel33 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.dbLayoutPanel34 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.ManualTravelButton = new System.Windows.Forms.Button();
             this.NewsPaper = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.Informants = new System.Windows.Forms.TabPage();
@@ -131,11 +136,6 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label35 = new Sherlock_Holmes_Text_Adventure.NotesLabel();
             this.EndQuestions = new System.Windows.Forms.TabPage();
-            this.dbLayoutPanel33 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
-            this.dbLayoutPanel34 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
-            this.ManualTravelButton = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.WorldMapPanel.SuspendLayout();
             this.AllTabs.SuspendLayout();
             this.Intro.SuspendLayout();
@@ -146,6 +146,8 @@
             this.dbLayoutPanel28.SuspendLayout();
             this.dbLayoutPanel30.SuspendLayout();
             this.dbLayoutPanel29.SuspendLayout();
+            this.dbLayoutPanel33.SuspendLayout();
+            this.dbLayoutPanel34.SuspendLayout();
             this.NewsPaper.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.SuspendLayout();
@@ -199,8 +201,6 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.dbLayoutPanel27.SuspendLayout();
-            this.dbLayoutPanel33.SuspendLayout();
-            this.dbLayoutPanel34.SuspendLayout();
             this.SuspendLayout();
             // 
             // WorldMapPanel
@@ -432,6 +432,82 @@
             this.directoryButton1.Text = "Catagories";
             this.directoryButton1.UseVisualStyleBackColor = true;
             this.directoryButton1.Click += new System.EventHandler(this.DirectoryCatagoryButton_Click);
+            // 
+            // dbLayoutPanel33
+            // 
+            this.dbLayoutPanel33.ColumnCount = 1;
+            this.dbLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.dbLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.dbLayoutPanel33.Controls.Add(this.dbLayoutPanel34, 0, 0);
+            this.dbLayoutPanel33.Controls.Add(this.ManualTravelButton, 0, 1);
+            this.dbLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dbLayoutPanel33.Location = new System.Drawing.Point(0, 555);
+            this.dbLayoutPanel33.Margin = new System.Windows.Forms.Padding(0);
+            this.dbLayoutPanel33.Name = "dbLayoutPanel33";
+            this.dbLayoutPanel33.RowCount = 2;
+            this.dbLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.dbLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.dbLayoutPanel33.Size = new System.Drawing.Size(117, 63);
+            this.dbLayoutPanel33.TabIndex = 3;
+            // 
+            // dbLayoutPanel34
+            // 
+            this.dbLayoutPanel34.ColumnCount = 2;
+            this.dbLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.dbLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.dbLayoutPanel34.Controls.Add(this.comboBox1, 0, 0);
+            this.dbLayoutPanel34.Controls.Add(this.comboBox2, 1, 0);
+            this.dbLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dbLayoutPanel34.Location = new System.Drawing.Point(3, 3);
+            this.dbLayoutPanel34.Name = "dbLayoutPanel34";
+            this.dbLayoutPanel34.RowCount = 1;
+            this.dbLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.dbLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.dbLayoutPanel34.Size = new System.Drawing.Size(111, 25);
+            this.dbLayoutPanel34.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox1.DropDownHeight = 75;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.Location = new System.Drawing.Point(0, 0);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox1.MaxDropDownItems = 100;
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(55, 21);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "NW",
+            "SW",
+            "EC",
+            "WC"});
+            this.comboBox2.Location = new System.Drawing.Point(55, 0);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox2.MaxDropDownItems = 4;
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(56, 21);
+            this.comboBox2.TabIndex = 1;
+            // 
+            // ManualTravelButton
+            // 
+            this.ManualTravelButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ManualTravelButton.Location = new System.Drawing.Point(3, 31);
+            this.ManualTravelButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.ManualTravelButton.Name = "ManualTravelButton";
+            this.ManualTravelButton.Size = new System.Drawing.Size(111, 32);
+            this.ManualTravelButton.TabIndex = 1;
+            this.ManualTravelButton.Text = "Travel";
+            this.ManualTravelButton.UseVisualStyleBackColor = true;
+            this.ManualTravelButton.Click += new System.EventHandler(this.ManualTravelButton_Click);
             // 
             // NewsPaper
             // 
@@ -1732,78 +1808,6 @@
             this.EndQuestions.Text = "End Questions";
             this.EndQuestions.UseVisualStyleBackColor = true;
             // 
-            // dbLayoutPanel33
-            // 
-            this.dbLayoutPanel33.ColumnCount = 1;
-            this.dbLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel33.Controls.Add(this.dbLayoutPanel34, 0, 0);
-            this.dbLayoutPanel33.Controls.Add(this.ManualTravelButton, 0, 1);
-            this.dbLayoutPanel33.Location = new System.Drawing.Point(0, 555);
-            this.dbLayoutPanel33.Margin = new System.Windows.Forms.Padding(0);
-            this.dbLayoutPanel33.Name = "dbLayoutPanel33";
-            this.dbLayoutPanel33.RowCount = 2;
-            this.dbLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel33.Size = new System.Drawing.Size(117, 63);
-            this.dbLayoutPanel33.TabIndex = 3;
-            // 
-            // dbLayoutPanel34
-            // 
-            this.dbLayoutPanel34.ColumnCount = 2;
-            this.dbLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel34.Controls.Add(this.comboBox1, 0, 0);
-            this.dbLayoutPanel34.Controls.Add(this.comboBox2, 1, 0);
-            this.dbLayoutPanel34.Location = new System.Drawing.Point(3, 3);
-            this.dbLayoutPanel34.Name = "dbLayoutPanel34";
-            this.dbLayoutPanel34.RowCount = 1;
-            this.dbLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel34.Size = new System.Drawing.Size(111, 25);
-            this.dbLayoutPanel34.TabIndex = 0;
-            // 
-            // ManualTravelButton
-            // 
-            this.ManualTravelButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ManualTravelButton.Location = new System.Drawing.Point(3, 31);
-            this.ManualTravelButton.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.ManualTravelButton.Name = "ManualTravelButton";
-            this.ManualTravelButton.Size = new System.Drawing.Size(111, 32);
-            this.ManualTravelButton.TabIndex = 1;
-            this.ManualTravelButton.Text = "Travel";
-            this.ManualTravelButton.UseVisualStyleBackColor = true;
-            this.ManualTravelButton.Click += new System.EventHandler(this.ManualTravelButton_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownHeight = 75;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Location = new System.Drawing.Point(0, 0);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox1.MaxDropDownItems = 100;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(55, 21);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "NW",
-            "SW",
-            "EC",
-            "WC"});
-            this.comboBox2.Location = new System.Drawing.Point(55, 0);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox2.MaxDropDownItems = 4;
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(56, 21);
-            this.comboBox2.TabIndex = 1;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1828,6 +1832,8 @@
             this.dbLayoutPanel30.ResumeLayout(false);
             this.dbLayoutPanel30.PerformLayout();
             this.dbLayoutPanel29.ResumeLayout(false);
+            this.dbLayoutPanel33.ResumeLayout(false);
+            this.dbLayoutPanel34.ResumeLayout(false);
             this.NewsPaper.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
@@ -1905,8 +1911,6 @@
             this.splitContainer1.ResumeLayout(false);
             this.dbLayoutPanel27.ResumeLayout(false);
             this.dbLayoutPanel27.PerformLayout();
-            this.dbLayoutPanel33.ResumeLayout(false);
-            this.dbLayoutPanel34.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2010,7 +2014,7 @@
         private System.Windows.Forms.Label label37;
         private DBLayoutPanel dbLayoutPanel29;
         private DBLayoutPanel dbLayoutPanel31;
-        private DirectoryButton directoryButton1;
+        private System.Windows.Forms.Button directoryButton1;
         private DBLayoutPanel dbLayoutPanel32;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label38;
