@@ -34,9 +34,8 @@ namespace Sherlock_Holmes_Text_Adventure
                 for (int i = 0; i < RowElements.Length - 1; i++)
                 {
                     //Create a new label, assign a location ID to the label and add it to the cell
-                    NotesLabel label = new NotesLabel();
+                    NotesLabel label = new NotesLabel(RowElements[2], RowElements[1]);
                     label.Text = RowElements[i];
-                    label.SetLocationID(RowElements[1]);
                     label.Click += ShowLocationInformation;
                     NotesPanel.Controls.Add(label, i, NotesPanel.RowCount - 1);
                 }
@@ -46,7 +45,7 @@ namespace Sherlock_Holmes_Text_Adventure
             }
             else
             {
-                Console.WriteLine("You have already been here");
+                MessageBox.Show("You have already been to this location. Check your notes!", "Note");
             }
         }
 
@@ -54,7 +53,7 @@ namespace Sherlock_Holmes_Text_Adventure
         {
             //When selecting the row, print the information of that location on the other split panel
             NotesLabel selectedLabel = (NotesLabel)sender;
-            InformationTextLabel.Text = LocationInformation[selectedLabel.GetLocationID()];
+            InformationTextLabel.Text = LocationInformation[selectedLabel.LocationID];
         }
     }
 }

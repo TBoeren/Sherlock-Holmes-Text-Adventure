@@ -83,17 +83,13 @@ namespace Sherlock_Holmes_Text_Adventure
             //add the controls
             for (int i = 0; i < RowElements.Length; i++)
             {
-                NotesLabel LocationLabel = new NotesLabel();
-
-                LocationLabel.Text = RowElements[i];
-                LocationLabel.Margin = new Padding(0, 0, 0, 0);
-                LocationLabel.BorderStyle = BorderStyle.FixedSingle;
-                LocationLabel.Dock = DockStyle.Top;
-                LocationLabel.Click += LocationSelected;
-
                 //Check if the RowElement[i] is a key in the names dictionary
                 if (CurrentlyLetterDirectory.ContainsKey(RowElements[i]))
                 {
+                    NotesLabel LocationLabel = new NotesLabel(RowElements[i], CurrentlyLetterDirectory[RowElements[i]]);
+                    LocationLabel.Click += LocationSelected;
+                    LocationLabel.Text = RowElements[i];
+
                     //For the catagories, make them stand out
                     if (RowElements[i + 1] == "")
                     {
@@ -102,12 +98,14 @@ namespace Sherlock_Holmes_Text_Adventure
                     }
 
                     //If it is, assign the location ID
-                    LocationLabel.SetLocationID(CurrentlyLetterDirectory[RowElements[i]]);
-                    LocationLabel.SetLocationName(RowElements[i]);
                     DirectoryPanel.Controls.Add(LocationLabel, i, DirectoryPanel.RowCount);
                 }
                 else
                 {
+                    NotesLabel LocationLabel = new NotesLabel(RowElements[i - 1], RowElements[i]);
+                    LocationLabel.Click += LocationSelected;
+                    LocationLabel.Text = RowElements[i];
+
                     if (RowElements[i] == "")
                     {
                         //For the catagories, make them stand out
@@ -115,8 +113,6 @@ namespace Sherlock_Holmes_Text_Adventure
                         LocationLabel.ForeColor = Color.White;
                     }
 
-                    LocationLabel.SetLocationID(RowElements[i]);
-                    LocationLabel.SetLocationName(RowElements[i - 1]);
                     DirectoryPanel.Controls.Add(LocationLabel, i, DirectoryPanel.RowCount);
                 }
             }
@@ -216,7 +212,7 @@ namespace Sherlock_Holmes_Text_Adventure
         void LocationSelected(object sender, EventArgs e)
         {
             NotesLabel SelectedLabel = (NotesLabel)sender;
-            string[] LocationInfo = CaseLocations.FindLocationArray(SelectedLabel.GetLocationID());
+            string[] LocationInfo = CaseLocations.FindLocationArray(SelectedLabel.LocationID);
 
             if (LocationInfo.Length > 0)
             {
@@ -226,11 +222,11 @@ namespace Sherlock_Holmes_Text_Adventure
             {
                 List<string> IrrelevantLocationInfo = new List<string>();
 
-                if (SelectedLabel.GetLocationID() != "")
+                if (SelectedLabel.LocationID != "")
                 {
                     //Add the Name, the location and the info from the location and store it in the notes
-                    IrrelevantLocationInfo.Add(SelectedLabel.GetLocationName());
-                    IrrelevantLocationInfo.Add(SelectedLabel.GetLocationID());
+                    IrrelevantLocationInfo.Add(SelectedLabel.LocationName);
+                    IrrelevantLocationInfo.Add(SelectedLabel.LocationID);
                     IrrelevantLocationInfo.Add("You find nothing of interest");
                     CaseNotes.StoreNotes(IrrelevantLocationInfo.ToArray());
                 }
@@ -272,7 +268,7 @@ namespace Sherlock_Holmes_Text_Adventure
                 }
                 else
                 {
-                    MessageBox.Show("This location does not exist");
+                    MessageBox.Show("This location does not exist", "Note");
                 }      
             }
         }
