@@ -91,6 +91,15 @@ namespace Sherlock_Holmes_Text_Adventure.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string CaseTitle {
+            get {
+                return ResourceManager.GetString("CaseTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap d014a5d5fcedd3cb4fe39aa1b026b42e {

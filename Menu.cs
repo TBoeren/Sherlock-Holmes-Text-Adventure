@@ -19,7 +19,7 @@ namespace Sherlock_Holmes_Text_Adventure
             InitializeComponent();
 
             //Create classes for the tabs
-            IntroTab = new Intro(label39);
+            IntroTab = new Intro(label39, label38);
             SherlockMap = new WorldMap(WorldMapImage, WorldMap);
             LocationFinder = new CaseLocationDatabase();
             InformantsTab = new Informants(tableLayoutPanel3, LocationFinder);
