@@ -169,16 +169,24 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Newspapers-1.jpg" />
+    <None Include="Resources\NewspaperFront.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Newspapers-2.jpg" />
+    <None Include="Resources\NewspaperBack.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Newspapers-1 Small.jpg" />
+    <None Include="Resources\NewspaperFrontSmall.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Newspapers-2Small.jpg" />
+    <None Include="Resources\NewspaperBackSmall.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

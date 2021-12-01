@@ -25,7 +25,7 @@ namespace Sherlock_Holmes_Text_Adventure
             InformantsTab = new Informants(tableLayoutPanel3, LocationFinder);
             NotesTab = new Notes(dbLayoutPanel27, label35);
             DirectoryTab = new Directory(dbLayoutPanel30,dbLayoutPanel31, LocationFinder, NotesTab, comboBox1, comboBox2);
-            NewspaperTab = new Newspaper();
+            NewspaperTab = new Newspaper(NewspaperFront, NewspaperBack);
 
             //Resize the tabs to fit properly
             Menu_Resize(null, null);

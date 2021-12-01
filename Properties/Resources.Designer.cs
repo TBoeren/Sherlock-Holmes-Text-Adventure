@@ -241,46 +241,6 @@ namespace Sherlock_Holmes_Text_Adventure.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Newspapers_1 {
-            get {
-                object obj = ResourceManager.GetObject("Newspapers-1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Newspapers_1_Small {
-            get {
-                object obj = ResourceManager.GetObject("Newspapers-1 Small", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Newspapers_2 {
-            get {
-                object obj = ResourceManager.GetObject("Newspapers-2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Newspapers_2Small {
-            get {
-                object obj = ResourceManager.GetObject("Newspapers-2Small", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Pike {
             get {
                 object obj = ResourceManager.GetObject("Pike", resourceCulture);

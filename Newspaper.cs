@@ -15,9 +15,23 @@ namespace Sherlock_Holmes_Text_Adventure
         Point ScrollPosition;
         Panel NewspaperPanel;
 
-        public Newspaper()
-        {
+        private Image NewspaperFrontSmall;
+        private Image NewspaperBackSmall;
+        private Image NewspaperFront;
+        private Image NewspaperBack;
 
+        public Newspaper(PictureBox NewspaperFrontImage, PictureBox NewspaperBackImage)
+        {
+            //Get and set the images for the newspaper
+            ExternalFileManager FileManager = new ExternalFileManager();
+
+            NewspaperFront = Image.FromFile(FileManager.GetFileLocation("NewspaperFront.jpg"));
+            NewspaperFrontSmall = Image.FromFile(FileManager.GetFileLocation("NewspaperFrontSmall.jpg"));
+            NewspaperBack = Image.FromFile(FileManager.GetFileLocation("NewspaperBack.jpg"));
+            NewspaperBackSmall = Image.FromFile(FileManager.GetFileLocation("NewspaperBackSmall.jpg"));
+
+            NewspaperFrontImage.Image = NewspaperFrontSmall;
+            NewspaperBackImage.Image = NewspaperBackSmall;
         }
 
         public void UpdateMouseZoom(PictureBox selectedImage)
@@ -28,11 +42,11 @@ namespace Sherlock_Holmes_Text_Adventure
                 selectedImage.Tag = "Zoomed";
                 if (selectedImage.Name == "NewspaperFront")
                 {
-                    selectedImage.Image = Properties.Resources.Newspapers_1;
+                    selectedImage.Image = NewspaperFront;
                 }
                 else
                 {
-                    selectedImage.Image = Properties.Resources.Newspapers_2;
+                    selectedImage.Image = NewspaperBack;
                 }
             }
             else
@@ -40,11 +54,11 @@ namespace Sherlock_Holmes_Text_Adventure
                 selectedImage.Tag = "";
                 if (selectedImage.Name == "NewspaperFront")
                 {
-                    selectedImage.Image = Properties.Resources.Newspapers_1_Small;
+                    selectedImage.Image = NewspaperFrontSmall;
                 }
                 else
                 {
-                    selectedImage.Image = Properties.Resources.Newspapers_2Small;
+                    selectedImage.Image = NewspaperBackSmall;
                 }
             }
         }
