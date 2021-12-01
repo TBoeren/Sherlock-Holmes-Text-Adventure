@@ -56,6 +56,7 @@
     <Compile Include="ExternalFileManager.cs" />
     <Compile Include="IExternalFilesManager.cs" />
     <Compile Include="Intro.cs" />
+    <Compile Include="Newspaper.cs" />
     <Compile Include="NotesLabel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -166,6 +167,18 @@
     <None Include="Resources\Intro.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Newspapers-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Newspapers-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Newspapers-1 Small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Newspapers-2Small.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

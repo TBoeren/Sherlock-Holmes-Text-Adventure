@@ -12,6 +12,7 @@ namespace Sherlock_Holmes_Text_Adventure
         private Notes NotesTab;
         private Directory DirectoryTab;
         private CaseLocationDatabase LocationFinder;
+        private Newspaper NewspaperTab;
 
         public Menu()
         {
@@ -24,6 +25,7 @@ namespace Sherlock_Holmes_Text_Adventure
             InformantsTab = new Informants(tableLayoutPanel3, LocationFinder);
             NotesTab = new Notes(dbLayoutPanel27, label35);
             DirectoryTab = new Directory(dbLayoutPanel30,dbLayoutPanel31, LocationFinder, NotesTab, comboBox1, comboBox2);
+            NewspaperTab = new Newspaper();
 
             //Resize the tabs to fit properly
             Menu_Resize(null, null);
@@ -95,6 +97,50 @@ namespace Sherlock_Holmes_Text_Adventure
         private void ManualTravelButton_Click(object sender, EventArgs e)
         {
             DirectoryTab.OnManualTravelButtonPressed(sender, e);
+        }
+
+        private void NewspaperImage_Click(object sender, EventArgs e)
+        {
+            MouseEventArgs MouseButtonPressed = (MouseEventArgs)e;
+            //If the map is selected, zoom in or out based on the current state
+            if (NewspaperTab != null && MouseButtonPressed.Button == MouseButtons.Left)
+            {
+                PictureBox SelectedNewspaper = (PictureBox)sender;
+                NewspaperTab.UpdateMouseZoom(SelectedNewspaper);
+            }
+        }
+
+        private void NewspaperImage_MouseDown(object sender, MouseEventArgs e)
+        {
+            MouseEventArgs MouseButtonPressed = (MouseEventArgs)e;
+            //When the right mouse button is pressed, initiate the drag state
+            if (NewspaperTab != null && MouseButtonPressed.Button == MouseButtons.Right)
+            {
+                PictureBox NewspaperImage = (PictureBox)sender;
+                Panel NewspaperPanel = (Panel)NewspaperImage.Parent;
+
+                NewspaperTab.UpdateDragState(e.X, e.Y, NewspaperPanel, NewspaperImage);
+            }
+        }
+
+        private void NewspaperImage_MouseUp(object sender, MouseEventArgs e)
+        {
+            MouseEventArgs MouseButtonPressed = (MouseEventArgs)e;
+            //When the right mouse button is released, stop the drag state
+            if (NewspaperTab != null && MouseButtonPressed.Button == MouseButtons.Right)
+            {
+                NewspaperTab.UpdateDragState(0, 0, null, null);
+            }
+        }
+
+        private void NewspaperImage_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseEventArgs MouseButtonPressed = (MouseEventArgs)e;
+            //When the right mouse button is held down on the map, you can scroll until the edges of the map are reached
+            if (NewspaperTab != null && MouseButtonPressed.Button == MouseButtons.Right)
+            {
+                NewspaperTab.DragMap(e.X, e.Y);
+            }
         }
     }
 }

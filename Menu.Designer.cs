@@ -38,9 +38,14 @@
             this.Directory = new System.Windows.Forms.TabPage();
             this.NewsPaper = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.NewspaperFront = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.NewspaperBack = new System.Windows.Forms.PictureBox();
             this.Informants = new System.Windows.Forms.TabPage();
             this.Notes = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label35 = new System.Windows.Forms.Label();
             this.EndQuestions = new System.Windows.Forms.TabPage();
             this.dbLayoutPanel32 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.label39 = new System.Windows.Forms.Label();
@@ -135,7 +140,6 @@
             this.dbLayoutPanel27 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
             this.WorldMapPanel.SuspendLayout();
             this.AllTabs.SuspendLayout();
             this.Intro.SuspendLayout();
@@ -144,7 +148,13 @@
             this.Directory.SuspendLayout();
             this.NewsPaper.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NewspaperFront)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NewspaperBack)).BeginInit();
             this.Informants.SuspendLayout();
             this.Notes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -299,9 +309,70 @@
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(3, 3);
             this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.AutoScroll = true;
+            this.splitContainer2.Panel1.Controls.Add(this.panel1);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.panel2);
             this.splitContainer2.Size = new System.Drawing.Size(1233, 618);
             this.splitContainer2.SplitterDistance = 617;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.NewspaperFront);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(617, 618);
+            this.panel1.TabIndex = 0;
+            // 
+            // NewspaperFront
+            // 
+            this.NewspaperFront.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NewspaperFront.Image = global::Sherlock_Holmes_Text_Adventure.Properties.Resources.Newspapers_1_Small;
+            this.NewspaperFront.Location = new System.Drawing.Point(0, 3);
+            this.NewspaperFront.Name = "NewspaperFront";
+            this.NewspaperFront.Size = new System.Drawing.Size(827, 1170);
+            this.NewspaperFront.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.NewspaperFront.TabIndex = 0;
+            this.NewspaperFront.TabStop = false;
+            this.NewspaperFront.Click += new System.EventHandler(this.NewspaperImage_Click);
+            this.NewspaperFront.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NewspaperImage_MouseDown);
+            this.NewspaperFront.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NewspaperImage_MouseMove);
+            this.NewspaperFront.MouseUp += new System.Windows.Forms.MouseEventHandler(this.NewspaperImage_MouseUp);
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.AutoSize = true;
+            this.panel2.Controls.Add(this.NewspaperBack);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(612, 618);
+            this.panel2.TabIndex = 1;
+            // 
+            // NewspaperBack
+            // 
+            this.NewspaperBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NewspaperBack.Image = global::Sherlock_Holmes_Text_Adventure.Properties.Resources.Newspapers_2Small;
+            this.NewspaperBack.Location = new System.Drawing.Point(0, 3);
+            this.NewspaperBack.Name = "NewspaperBack";
+            this.NewspaperBack.Size = new System.Drawing.Size(827, 1170);
+            this.NewspaperBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.NewspaperBack.TabIndex = 0;
+            this.NewspaperBack.TabStop = false;
+            this.NewspaperBack.Click += new System.EventHandler(this.NewspaperImage_Click);
+            this.NewspaperBack.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NewspaperImage_MouseDown);
+            this.NewspaperBack.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NewspaperImage_MouseMove);
+            this.NewspaperBack.MouseUp += new System.Windows.Forms.MouseEventHandler(this.NewspaperImage_MouseUp);
             // 
             // Informants
             // 
@@ -350,6 +421,17 @@
             this.splitContainer1.Size = new System.Drawing.Size(1239, 624);
             this.splitContainer1.SplitterDistance = 413;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // label35
+            // 
+            this.label35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label35.Font = new System.Drawing.Font("IM FELL English", 12F);
+            this.label35.Location = new System.Drawing.Point(0, 0);
+            this.label35.Margin = new System.Windows.Forms.Padding(0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(1239, 207);
+            this.label35.TabIndex = 0;
             // 
             // EndQuestions
             // 
@@ -1797,17 +1879,6 @@
             this.label33.TabIndex = 0;
             this.label33.Text = "Inhabitant:";
             // 
-            // label35
-            // 
-            this.label35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label35.Font = new System.Drawing.Font("IM FELL English", 12F);
-            this.label35.Location = new System.Drawing.Point(0, 0);
-            this.label35.Margin = new System.Windows.Forms.Padding(0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(1239, 207);
-            this.label35.TabIndex = 0;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1826,8 +1897,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.WorldMapImage)).EndInit();
             this.Directory.ResumeLayout(false);
             this.NewsPaper.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NewspaperFront)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NewspaperBack)).EndInit();
             this.Informants.ResumeLayout(false);
             this.Notes.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -2023,6 +2104,10 @@
         private System.Windows.Forms.Button ManualTravelButton;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox NewspaperFront;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox NewspaperBack;
     }
 }
 

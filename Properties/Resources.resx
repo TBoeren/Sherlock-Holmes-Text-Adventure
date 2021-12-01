@@ -118,55 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="SherlockHolmes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SherlockHolmes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MapZoomed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MapZoomed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="d014a5d5fcedd3cb4fe39aa1b026b42e" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\d014a5d5fcedd3cb4fe39aa1b026b42e.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="28355-old-paper-background-4500x3090-retina" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\28355-old-paper-background-4500x3090-retina.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Map" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Map.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="b2cc82ed59bff1f6113a728e4b21473e" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\b2cc82ed59bff1f6113a728e4b21473e.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ellis" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ellis.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lomax" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lomax.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Meeks" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Meeks.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pike" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pike.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Brain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Brain.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Murray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Murray.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Porky" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Porky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ellis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ellis.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SherlockLocations" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SherlockLocations.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Pike" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pike.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SherlockHolmes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SherlockHolmes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Newspapers-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Newspapers-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b2cc82ed59bff1f6113a728e4b21473e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b2cc82ed59bff1f6113a728e4b21473e.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MapZoomed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MapZoomed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="London_Directory_Catagories" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\London Directory Catagories.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Newspapers-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Newspapers-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d014a5d5fcedd3cb4fe39aa1b026b42e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d014a5d5fcedd3cb4fe39aa1b026b42e.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Porky" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Porky.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="28355-old-paper-background-4500x3090-retina" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\28355-old-paper-background-4500x3090-retina.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Meeks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Meeks.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Intro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Intro.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Lomax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lomax.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="London_Directory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\London Directory.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="London_Directory_Catagories" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\London Directory Catagories.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="Murray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Murray.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Newspapers-1 Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Newspapers-1 Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Newspapers-2Small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Newspapers-2Small.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

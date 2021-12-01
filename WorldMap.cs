@@ -11,7 +11,6 @@ namespace Sherlock_Holmes_Text_Adventure
     internal class WorldMap
     {
         PictureBox MapImage;
-        bool IsZoomedIn = false;
         Point DragStartCoordinates;
         Point ScrollPosition;
         Panel MapPanel;
@@ -25,15 +24,16 @@ namespace Sherlock_Holmes_Text_Adventure
         public void UpdateMouseZoom()
         {
             //If the map is not zoomed in, zoom in. Otherwise, zoom out
-            if (!IsZoomedIn)
+            if (MapImage.Tag as string == null || MapImage.Tag as string == "")
             {
+                MapImage.Tag = "Zoomed";
                 MapImage.Image = Properties.Resources.MapZoomed;
             }
             else
             {
+                MapImage.Tag = "";
                 MapImage.Image = Properties.Resources.Map;
             }
-            IsZoomedIn = !IsZoomedIn;
         }
 
         public void UpdateDragState(int DragX, int DragY)

@@ -111,7 +111,9 @@ namespace Sherlock_Holmes_Text_Adventure.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to We knock at 221B Baker Street, and to our greatest surprise, Holmes himself answers the door. “Ah, you arrive at the best possible moment: you are expected in the kitchen. I&apos;ll be fair play, Wiggins, I&apos;ll let you get a head start to solve this case which, on the whole, is rather banal…&quot; We hear Watson&apos;s wrathful voice coming from the kitchen: “None of this is a game, you can&apos;t leave like this!&quot; “Watch me!&quot; replies a jolly Holmes, going down the few stairs separating him from the street, leaving us alone on  [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to We knock at 221B Baker Street, and to our greatest surprise, Holmes himself answers the door. “Ah, you arrive at the best possible moment: you are expected in the kitchen. I&apos;ll be fair play, Wiggins, I&apos;ll let you get a head start to solve this case which, on the whole, is rather banal…&quot; 
+        ///We hear Watson&apos;s wrathful voice coming from the kitchen: “None of this is a game, you can&apos;t leave like this!&quot; 
+        ///“Watch me!&quot; replies a jolly Holmes, going down the few stairs separating him from the street, leaving us alone [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Intro {
             get {
@@ -232,6 +234,46 @@ namespace Sherlock_Holmes_Text_Adventure.Properties {
         internal static System.Drawing.Bitmap Murray {
             get {
                 object obj = ResourceManager.GetObject("Murray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Newspapers_1 {
+            get {
+                object obj = ResourceManager.GetObject("Newspapers-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Newspapers_1_Small {
+            get {
+                object obj = ResourceManager.GetObject("Newspapers-1 Small", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Newspapers_2 {
+            get {
+                object obj = ResourceManager.GetObject("Newspapers-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Newspapers_2Small {
+            get {
+                object obj = ResourceManager.GetObject("Newspapers-2Small", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
