@@ -264,6 +264,7 @@
             // Intro
             // 
             this.Intro.BackgroundImage = global::Sherlock_Holmes_Text_Adventure.Properties.Resources._28355_old_paper_background_4500x3090_retina;
+            this.Intro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Intro.Controls.Add(this.dbLayoutPanel32);
             this.Intro.Location = new System.Drawing.Point(4, 22);
             this.Intro.Margin = new System.Windows.Forms.Padding(0);
@@ -541,6 +542,7 @@
             // 
             // NewsPaper
             // 
+            this.NewsPaper.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.NewsPaper.Controls.Add(this.splitContainer2);
             this.NewsPaper.Location = new System.Drawing.Point(4, 22);
             this.NewsPaper.Margin = new System.Windows.Forms.Padding(0);
@@ -1892,6 +1894,7 @@
             // EndQuestions
             // 
             this.EndQuestions.BackgroundImage = global::Sherlock_Holmes_Text_Adventure.Properties.Resources._28355_old_paper_background_4500x3090_retina;
+            this.EndQuestions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.EndQuestions.Controls.Add(this.dbLayoutPanel35);
             this.EndQuestions.Location = new System.Drawing.Point(4, 22);
             this.EndQuestions.Margin = new System.Windows.Forms.Padding(0);
