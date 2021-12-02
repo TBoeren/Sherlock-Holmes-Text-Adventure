@@ -91,7 +91,7 @@ namespace Sherlock_Holmes_Text_Adventure.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Vanishing from Hyde Park.
         /// </summary>
         internal static string CaseTitle {
             get {
@@ -288,6 +288,18 @@ namespace Sherlock_Holmes_Text_Adventure.Properties {
         internal static string SherlockLocations {
             get {
                 return ResourceManager.GetString("SherlockLocations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Question;Possible Answers;Answer
+        ///Who abducted Charly?;Yvonne Nance? The nightwatch? Grosvenor Investments? Howard Parker? Stuart Oppenheimer? Oscar Teevan? Patrick Hennessy;Howard Parker
+        ///Why?;To discreetly enter the Grosvenor Investments? Money Extortion from Mrs Nance? To be eaten? To replace his lost pet? ;To discreetly enter the Grosvenor Investments
+        ///Where is Charly?;Baker Meat? Cannon? Chinese Wonders? At Howard Parker&apos;s? At Stuart Oppenheimer&apos;s? At Patrick Henessy&apos;s? At Grosvenor Investment&apos;s;At How [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SherlockQuestions {
+            get {
+                return ResourceManager.GetString("SherlockQuestions", resourceCulture);
             }
         }
     }

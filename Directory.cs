@@ -87,6 +87,7 @@ namespace Sherlock_Holmes_Text_Adventure
                 if (CurrentlyLetterDirectory.ContainsKey(RowElements[i]))
                 {
                     NotesLabel LocationLabel = new NotesLabel(RowElements[i], CurrentlyLetterDirectory[RowElements[i]]);
+                    LocationLabel.SuspendLayout();
                     LocationLabel.Click += LocationSelected;
                     LocationLabel.Text = RowElements[i];
 
@@ -99,10 +100,12 @@ namespace Sherlock_Holmes_Text_Adventure
 
                     //If it is, assign the location ID
                     DirectoryPanel.Controls.Add(LocationLabel, i, DirectoryPanel.RowCount);
+                    LocationLabel.ResumeLayout(false);
                 }
                 else
                 {
                     NotesLabel LocationLabel = new NotesLabel(RowElements[i - 1], RowElements[i]);
+                    LocationLabel.SuspendLayout();
                     LocationLabel.Click += LocationSelected;
                     LocationLabel.Text = RowElements[i];
 
@@ -114,6 +117,7 @@ namespace Sherlock_Holmes_Text_Adventure
                     }
 
                     DirectoryPanel.Controls.Add(LocationLabel, i, DirectoryPanel.RowCount);
+                    LocationLabel.ResumeLayout(false);
                 }
             }
             //Rowcount needs to be manually updated for later use

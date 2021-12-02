@@ -34,8 +34,8 @@
             this.AllTabs = new System.Windows.Forms.TabControl();
             this.Intro = new System.Windows.Forms.TabPage();
             this.dbLayoutPanel32 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
-            this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
+            this.CaseIntroText = new System.Windows.Forms.Label();
+            this.CaseTitle = new System.Windows.Forms.Label();
             this.WorldMap = new System.Windows.Forms.TabPage();
             this.WorldMapImage = new System.Windows.Forms.PictureBox();
             this.Directory = new System.Windows.Forms.TabPage();
@@ -48,8 +48,8 @@
             this.directoryButton1 = new System.Windows.Forms.Button();
             this.dbLayoutPanel33 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.dbLayoutPanel34 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.NumbersComboBox = new System.Windows.Forms.ComboBox();
+            this.DistrictComboBox = new System.Windows.Forms.ComboBox();
             this.ManualTravelButton = new System.Windows.Forms.Button();
             this.NewsPaper = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
@@ -140,6 +140,18 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.EndQuestions = new System.Windows.Forms.TabPage();
+            this.dbLayoutPanel35 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.label41 = new System.Windows.Forms.Label();
+            this.dbLayoutPanel36 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.dbLayoutPanel38 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.SecondSeriesQPA = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.SecondSeriesAnswers = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.dbLayoutPanel37 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.FirstSeriesQPAPanel = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.FirstSeriesAnswers = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.QuestionSubmitButton = new System.Windows.Forms.Button();
             this.WorldMapPanel.SuspendLayout();
             this.AllTabs.SuspendLayout();
             this.Intro.SuspendLayout();
@@ -211,6 +223,11 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.dbLayoutPanel27.SuspendLayout();
+            this.EndQuestions.SuspendLayout();
+            this.dbLayoutPanel35.SuspendLayout();
+            this.dbLayoutPanel36.SuspendLayout();
+            this.dbLayoutPanel38.SuspendLayout();
+            this.dbLayoutPanel37.SuspendLayout();
             this.SuspendLayout();
             // 
             // WorldMapPanel
@@ -242,12 +259,14 @@
             this.AllTabs.Size = new System.Drawing.Size(1247, 650);
             this.AllTabs.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.AllTabs.TabIndex = 1;
+            this.AllTabs.SelectedIndexChanged += new System.EventHandler(this.AllTabs_SelectedIndexChanged);
             // 
             // Intro
             // 
             this.Intro.BackgroundImage = global::Sherlock_Holmes_Text_Adventure.Properties.Resources._28355_old_paper_background_4500x3090_retina;
             this.Intro.Controls.Add(this.dbLayoutPanel32);
             this.Intro.Location = new System.Drawing.Point(4, 22);
+            this.Intro.Margin = new System.Windows.Forms.Padding(0);
             this.Intro.Name = "Intro";
             this.Intro.Size = new System.Drawing.Size(1239, 624);
             this.Intro.TabIndex = 5;
@@ -258,8 +277,8 @@
             // 
             this.dbLayoutPanel32.ColumnCount = 1;
             this.dbLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.dbLayoutPanel32.Controls.Add(this.label39, 0, 1);
-            this.dbLayoutPanel32.Controls.Add(this.label38, 0, 0);
+            this.dbLayoutPanel32.Controls.Add(this.CaseIntroText, 0, 1);
+            this.dbLayoutPanel32.Controls.Add(this.CaseTitle, 0, 0);
             this.dbLayoutPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbLayoutPanel32.Location = new System.Drawing.Point(0, 0);
             this.dbLayoutPanel32.Name = "dbLayoutPanel32";
@@ -269,35 +288,35 @@
             this.dbLayoutPanel32.Size = new System.Drawing.Size(1239, 624);
             this.dbLayoutPanel32.TabIndex = 0;
             // 
-            // label39
+            // CaseIntroText
             // 
-            this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label39.Font = new System.Drawing.Font("IM FELL English", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(3, 62);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(1233, 562);
-            this.label39.TabIndex = 1;
-            this.label39.Text = "label39";
+            this.CaseIntroText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CaseIntroText.Font = new System.Drawing.Font("IM FELL English", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CaseIntroText.Location = new System.Drawing.Point(3, 62);
+            this.CaseIntroText.Name = "CaseIntroText";
+            this.CaseIntroText.Size = new System.Drawing.Size(1233, 562);
+            this.CaseIntroText.TabIndex = 1;
+            this.CaseIntroText.Text = "label39";
             // 
-            // label38
+            // CaseTitle
             // 
-            this.label38.AutoSize = true;
-            this.label38.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label38.Font = new System.Drawing.Font("IM FELL English", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(3, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(1233, 40);
-            this.label38.TabIndex = 0;
-            this.label38.Text = "Vanishing from Hyde Park";
-            this.label38.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CaseTitle.AutoSize = true;
+            this.CaseTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CaseTitle.Font = new System.Drawing.Font("IM FELL English", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CaseTitle.Location = new System.Drawing.Point(3, 0);
+            this.CaseTitle.Name = "CaseTitle";
+            this.CaseTitle.Size = new System.Drawing.Size(1233, 40);
+            this.CaseTitle.TabIndex = 0;
+            this.CaseTitle.Text = "Vanishing from Hyde Park";
+            this.CaseTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // WorldMap
             // 
             this.WorldMap.AutoScroll = true;
             this.WorldMap.Controls.Add(this.WorldMapImage);
             this.WorldMap.Location = new System.Drawing.Point(4, 22);
+            this.WorldMap.Margin = new System.Windows.Forms.Padding(0);
             this.WorldMap.Name = "WorldMap";
-            this.WorldMap.Padding = new System.Windows.Forms.Padding(3);
             this.WorldMap.Size = new System.Drawing.Size(1239, 624);
             this.WorldMap.TabIndex = 0;
             this.WorldMap.Text = "World Map";
@@ -307,7 +326,7 @@
             // 
             this.WorldMapImage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.WorldMapImage.Image = ((System.Drawing.Image)(resources.GetObject("WorldMapImage.Image")));
-            this.WorldMapImage.Location = new System.Drawing.Point(0, 0);
+            this.WorldMapImage.Location = new System.Drawing.Point(-3, -3);
             this.WorldMapImage.Name = "WorldMapImage";
             this.WorldMapImage.Size = new System.Drawing.Size(2205, 1733);
             this.WorldMapImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -324,6 +343,7 @@
             this.Directory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Directory.Controls.Add(this.dbLayoutPanel28);
             this.Directory.Location = new System.Drawing.Point(4, 22);
+            this.Directory.Margin = new System.Windows.Forms.Padding(0);
             this.Directory.Name = "Directory";
             this.Directory.Size = new System.Drawing.Size(1239, 624);
             this.Directory.TabIndex = 6;
@@ -465,8 +485,8 @@
             this.dbLayoutPanel34.ColumnCount = 2;
             this.dbLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.dbLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel34.Controls.Add(this.comboBox1, 0, 0);
-            this.dbLayoutPanel34.Controls.Add(this.comboBox2, 1, 0);
+            this.dbLayoutPanel34.Controls.Add(this.NumbersComboBox, 0, 0);
+            this.dbLayoutPanel34.Controls.Add(this.DistrictComboBox, 1, 0);
             this.dbLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbLayoutPanel34.Location = new System.Drawing.Point(3, 3);
             this.dbLayoutPanel34.Name = "dbLayoutPanel34";
@@ -476,36 +496,36 @@
             this.dbLayoutPanel34.Size = new System.Drawing.Size(111, 25);
             this.dbLayoutPanel34.TabIndex = 0;
             // 
-            // comboBox1
+            // NumbersComboBox
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.DropDownHeight = 75;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Location = new System.Drawing.Point(0, 0);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox1.MaxDropDownItems = 100;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(55, 21);
-            this.comboBox1.TabIndex = 0;
+            this.NumbersComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NumbersComboBox.DropDownHeight = 75;
+            this.NumbersComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NumbersComboBox.FormattingEnabled = true;
+            this.NumbersComboBox.IntegralHeight = false;
+            this.NumbersComboBox.Location = new System.Drawing.Point(0, 0);
+            this.NumbersComboBox.Margin = new System.Windows.Forms.Padding(0);
+            this.NumbersComboBox.MaxDropDownItems = 100;
+            this.NumbersComboBox.Name = "NumbersComboBox";
+            this.NumbersComboBox.Size = new System.Drawing.Size(55, 21);
+            this.NumbersComboBox.TabIndex = 0;
             // 
-            // comboBox2
+            // DistrictComboBox
             // 
-            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.DistrictComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DistrictComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DistrictComboBox.FormattingEnabled = true;
+            this.DistrictComboBox.Items.AddRange(new object[] {
             "NW",
             "SW",
             "EC",
             "WC"});
-            this.comboBox2.Location = new System.Drawing.Point(55, 0);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox2.MaxDropDownItems = 4;
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(56, 21);
-            this.comboBox2.TabIndex = 1;
+            this.DistrictComboBox.Location = new System.Drawing.Point(55, 0);
+            this.DistrictComboBox.Margin = new System.Windows.Forms.Padding(0);
+            this.DistrictComboBox.MaxDropDownItems = 4;
+            this.DistrictComboBox.Name = "DistrictComboBox";
+            this.DistrictComboBox.Size = new System.Drawing.Size(56, 21);
+            this.DistrictComboBox.TabIndex = 1;
             // 
             // ManualTravelButton
             // 
@@ -523,8 +543,8 @@
             // 
             this.NewsPaper.Controls.Add(this.splitContainer2);
             this.NewsPaper.Location = new System.Drawing.Point(4, 22);
+            this.NewsPaper.Margin = new System.Windows.Forms.Padding(0);
             this.NewsPaper.Name = "NewsPaper";
-            this.NewsPaper.Padding = new System.Windows.Forms.Padding(3);
             this.NewsPaper.Size = new System.Drawing.Size(1239, 624);
             this.NewsPaper.TabIndex = 1;
             this.NewsPaper.Text = "Newspaper ";
@@ -533,7 +553,7 @@
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -544,8 +564,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.panel2);
-            this.splitContainer2.Size = new System.Drawing.Size(1233, 618);
-            this.splitContainer2.SplitterDistance = 617;
+            this.splitContainer2.Size = new System.Drawing.Size(1239, 624);
+            this.splitContainer2.SplitterDistance = 620;
             this.splitContainer2.TabIndex = 0;
             // 
             // panel1
@@ -556,7 +576,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(617, 618);
+            this.panel1.Size = new System.Drawing.Size(620, 624);
             this.panel1.TabIndex = 0;
             // 
             // NewspaperFront
@@ -581,7 +601,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(612, 618);
+            this.panel2.Size = new System.Drawing.Size(615, 624);
             this.panel2.TabIndex = 1;
             // 
             // NewspaperBack
@@ -1783,6 +1803,7 @@
             this.Notes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Notes.Controls.Add(this.splitContainer1);
             this.Notes.Location = new System.Drawing.Point(4, 22);
+            this.Notes.Margin = new System.Windows.Forms.Padding(0);
             this.Notes.Name = "Notes";
             this.Notes.Size = new System.Drawing.Size(1239, 624);
             this.Notes.TabIndex = 3;
@@ -1871,12 +1892,190 @@
             // EndQuestions
             // 
             this.EndQuestions.BackgroundImage = global::Sherlock_Holmes_Text_Adventure.Properties.Resources._28355_old_paper_background_4500x3090_retina;
+            this.EndQuestions.Controls.Add(this.dbLayoutPanel35);
             this.EndQuestions.Location = new System.Drawing.Point(4, 22);
+            this.EndQuestions.Margin = new System.Windows.Forms.Padding(0);
             this.EndQuestions.Name = "EndQuestions";
             this.EndQuestions.Size = new System.Drawing.Size(1239, 624);
             this.EndQuestions.TabIndex = 4;
             this.EndQuestions.Text = "End Questions";
             this.EndQuestions.UseVisualStyleBackColor = true;
+            // 
+            // dbLayoutPanel35
+            // 
+            this.dbLayoutPanel35.ColumnCount = 1;
+            this.dbLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.dbLayoutPanel35.Controls.Add(this.label41, 0, 0);
+            this.dbLayoutPanel35.Controls.Add(this.dbLayoutPanel36, 0, 1);
+            this.dbLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dbLayoutPanel35.Location = new System.Drawing.Point(0, 0);
+            this.dbLayoutPanel35.Name = "dbLayoutPanel35";
+            this.dbLayoutPanel35.RowCount = 2;
+            this.dbLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.dbLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.dbLayoutPanel35.Size = new System.Drawing.Size(1239, 624);
+            this.dbLayoutPanel35.TabIndex = 1;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label41.Font = new System.Drawing.Font("IM FELL English", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(3, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(1233, 40);
+            this.label41.TabIndex = 0;
+            this.label41.Text = "Questions";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // dbLayoutPanel36
+            // 
+            this.dbLayoutPanel36.ColumnCount = 1;
+            this.dbLayoutPanel36.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.dbLayoutPanel36.Controls.Add(this.dbLayoutPanel38, 0, 3);
+            this.dbLayoutPanel36.Controls.Add(this.label38, 0, 0);
+            this.dbLayoutPanel36.Controls.Add(this.label39, 0, 2);
+            this.dbLayoutPanel36.Controls.Add(this.dbLayoutPanel37, 0, 1);
+            this.dbLayoutPanel36.Controls.Add(this.QuestionSubmitButton, 0, 4);
+            this.dbLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dbLayoutPanel36.Location = new System.Drawing.Point(3, 65);
+            this.dbLayoutPanel36.Name = "dbLayoutPanel36";
+            this.dbLayoutPanel36.RowCount = 5;
+            this.dbLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
+            this.dbLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
+            this.dbLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
+            this.dbLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
+            this.dbLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.dbLayoutPanel36.Size = new System.Drawing.Size(1233, 556);
+            this.dbLayoutPanel36.TabIndex = 1;
+            // 
+            // dbLayoutPanel38
+            // 
+            this.dbLayoutPanel38.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.dbLayoutPanel38.ColumnCount = 2;
+            this.dbLayoutPanel38.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.dbLayoutPanel38.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.dbLayoutPanel38.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.dbLayoutPanel38.Controls.Add(this.SecondSeriesQPA, 0, 0);
+            this.dbLayoutPanel38.Controls.Add(this.SecondSeriesAnswers, 1, 0);
+            this.dbLayoutPanel38.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dbLayoutPanel38.Location = new System.Drawing.Point(3, 293);
+            this.dbLayoutPanel38.Name = "dbLayoutPanel38";
+            this.dbLayoutPanel38.RowCount = 1;
+            this.dbLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.dbLayoutPanel38.Size = new System.Drawing.Size(1227, 100);
+            this.dbLayoutPanel38.TabIndex = 4;
+            // 
+            // SecondSeriesQPA
+            // 
+            this.SecondSeriesQPA.AutoSize = true;
+            this.SecondSeriesQPA.ColumnCount = 2;
+            this.SecondSeriesQPA.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SecondSeriesQPA.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SecondSeriesQPA.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SecondSeriesQPA.Location = new System.Drawing.Point(3, 3);
+            this.SecondSeriesQPA.Name = "SecondSeriesQPA";
+            this.SecondSeriesQPA.RowCount = 1;
+            this.SecondSeriesQPA.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SecondSeriesQPA.Size = new System.Drawing.Size(914, 0);
+            this.SecondSeriesQPA.TabIndex = 0;
+            // 
+            // SecondSeriesAnswers
+            // 
+            this.SecondSeriesAnswers.AutoSize = true;
+            this.SecondSeriesAnswers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.SecondSeriesAnswers.ColumnCount = 1;
+            this.SecondSeriesAnswers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SecondSeriesAnswers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SecondSeriesAnswers.Location = new System.Drawing.Point(923, 3);
+            this.SecondSeriesAnswers.Name = "SecondSeriesAnswers";
+            this.SecondSeriesAnswers.RowCount = 1;
+            this.SecondSeriesAnswers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SecondSeriesAnswers.Size = new System.Drawing.Size(301, 0);
+            this.SecondSeriesAnswers.TabIndex = 1;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label38.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label38.Font = new System.Drawing.Font("IM FELL English", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(0, 0);
+            this.label38.Margin = new System.Windows.Forms.Padding(0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(1233, 41);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "First Series";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label39.Font = new System.Drawing.Font("IM FELL English", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(0, 249);
+            this.label39.Margin = new System.Windows.Forms.Padding(0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(1233, 41);
+            this.label39.TabIndex = 2;
+            this.label39.Text = "Second Series";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dbLayoutPanel37
+            // 
+            this.dbLayoutPanel37.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.dbLayoutPanel37.ColumnCount = 2;
+            this.dbLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.dbLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.dbLayoutPanel37.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.dbLayoutPanel37.Controls.Add(this.FirstSeriesQPAPanel, 0, 0);
+            this.dbLayoutPanel37.Controls.Add(this.FirstSeriesAnswers, 1, 0);
+            this.dbLayoutPanel37.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dbLayoutPanel37.Location = new System.Drawing.Point(3, 44);
+            this.dbLayoutPanel37.Name = "dbLayoutPanel37";
+            this.dbLayoutPanel37.RowCount = 1;
+            this.dbLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.dbLayoutPanel37.Size = new System.Drawing.Size(1227, 100);
+            this.dbLayoutPanel37.TabIndex = 3;
+            // 
+            // FirstSeriesQPAPanel
+            // 
+            this.FirstSeriesQPAPanel.AutoSize = true;
+            this.FirstSeriesQPAPanel.ColumnCount = 2;
+            this.FirstSeriesQPAPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.FirstSeriesQPAPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.FirstSeriesQPAPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FirstSeriesQPAPanel.Location = new System.Drawing.Point(3, 3);
+            this.FirstSeriesQPAPanel.Name = "FirstSeriesQPAPanel";
+            this.FirstSeriesQPAPanel.RowCount = 1;
+            this.FirstSeriesQPAPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.FirstSeriesQPAPanel.Size = new System.Drawing.Size(914, 0);
+            this.FirstSeriesQPAPanel.TabIndex = 0;
+            // 
+            // FirstSeriesAnswers
+            // 
+            this.FirstSeriesAnswers.AutoSize = true;
+            this.FirstSeriesAnswers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.FirstSeriesAnswers.ColumnCount = 1;
+            this.FirstSeriesAnswers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.FirstSeriesAnswers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FirstSeriesAnswers.Location = new System.Drawing.Point(923, 3);
+            this.FirstSeriesAnswers.Name = "FirstSeriesAnswers";
+            this.FirstSeriesAnswers.RowCount = 1;
+            this.FirstSeriesAnswers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.FirstSeriesAnswers.Size = new System.Drawing.Size(301, 0);
+            this.FirstSeriesAnswers.TabIndex = 1;
+            // 
+            // QuestionSubmitButton
+            // 
+            this.QuestionSubmitButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.QuestionSubmitButton.Location = new System.Drawing.Point(1155, 501);
+            this.QuestionSubmitButton.Name = "QuestionSubmitButton";
+            this.QuestionSubmitButton.Size = new System.Drawing.Size(75, 52);
+            this.QuestionSubmitButton.TabIndex = 5;
+            this.QuestionSubmitButton.Text = "Submit";
+            this.QuestionSubmitButton.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
@@ -1884,9 +2083,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 650);
             this.Controls.Add(this.WorldMapPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Menu";
             this.Text = "Sherlock Holmes Consulting Detective";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResizeEnd += new System.EventHandler(this.Menu_Resize);
             this.Resize += new System.EventHandler(this.Menu_Resize);
             this.WorldMapPanel.ResumeLayout(false);
             this.AllTabs.ResumeLayout(false);
@@ -1991,6 +2192,15 @@
             this.splitContainer1.ResumeLayout(false);
             this.dbLayoutPanel27.ResumeLayout(false);
             this.dbLayoutPanel27.PerformLayout();
+            this.EndQuestions.ResumeLayout(false);
+            this.dbLayoutPanel35.ResumeLayout(false);
+            this.dbLayoutPanel35.PerformLayout();
+            this.dbLayoutPanel36.ResumeLayout(false);
+            this.dbLayoutPanel36.PerformLayout();
+            this.dbLayoutPanel38.ResumeLayout(false);
+            this.dbLayoutPanel38.PerformLayout();
+            this.dbLayoutPanel37.ResumeLayout(false);
+            this.dbLayoutPanel37.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2096,17 +2306,29 @@
         private DBLayoutPanel dbLayoutPanel31;
         private System.Windows.Forms.Button directoryButton1;
         private DBLayoutPanel dbLayoutPanel32;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label CaseIntroText;
+        private System.Windows.Forms.Label CaseTitle;
         private DBLayoutPanel dbLayoutPanel33;
         private DBLayoutPanel dbLayoutPanel34;
         private System.Windows.Forms.Button ManualTravelButton;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox NumbersComboBox;
+        private System.Windows.Forms.ComboBox DistrictComboBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox NewspaperFront;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox NewspaperBack;
+        private DBLayoutPanel dbLayoutPanel35;
+        private System.Windows.Forms.Label label41;
+        private DBLayoutPanel dbLayoutPanel36;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private DBLayoutPanel dbLayoutPanel38;
+        private DBLayoutPanel SecondSeriesQPA;
+        private DBLayoutPanel dbLayoutPanel37;
+        private DBLayoutPanel FirstSeriesQPAPanel;
+        private DBLayoutPanel SecondSeriesAnswers;
+        private DBLayoutPanel FirstSeriesAnswers;
+        private System.Windows.Forms.Button QuestionSubmitButton;
     }
 }
 

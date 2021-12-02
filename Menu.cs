@@ -13,27 +13,34 @@ namespace Sherlock_Holmes_Text_Adventure
         private Directory DirectoryTab;
         private CaseLocationDatabase LocationFinder;
         private Newspaper NewspaperTab;
+        private EndQuestions QuestionsTab;
+
+        private string CurrentTabPage;
 
         public Menu()
         {
             InitializeComponent();
 
             //Create classes for the tabs
-            IntroTab = new Intro(label39, label38);
+            IntroTab = new Intro(CaseIntroText, CaseTitle);
             SherlockMap = new WorldMap(WorldMapImage, WorldMap);
             LocationFinder = new CaseLocationDatabase();
             InformantsTab = new Informants(tableLayoutPanel3, LocationFinder);
             NotesTab = new Notes(dbLayoutPanel27, label35);
-            DirectoryTab = new Directory(dbLayoutPanel30,dbLayoutPanel31, LocationFinder, NotesTab, comboBox1, comboBox2);
+            DirectoryTab = new Directory(dbLayoutPanel30,dbLayoutPanel31, LocationFinder, NotesTab, NumbersComboBox, DistrictComboBox);
             NewspaperTab = new Newspaper(NewspaperFront, NewspaperBack);
+            QuestionsTab = new EndQuestions(FirstSeriesQPAPanel, SecondSeriesQPA, FirstSeriesAnswers, SecondSeriesAnswers);
 
             //Resize the tabs to fit properly
             Menu_Resize(null, null);
+            CurrentTabPage = "Intro";
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
+            this.ResizeBegin += (s, evt) => { this.SuspendLayout(); };
+            this.ResizeEnd += (s, evt) => { this.ResumeLayout(true); };
         }
 
         private void WorldMap_Click(object sender, EventArgs e)
@@ -80,7 +87,10 @@ namespace Sherlock_Holmes_Text_Adventure
         private void Menu_Resize(object sender, EventArgs e)
         {
             //Resize the tabs at the top based on the new width
-            AllTabs.ItemSize = new Size((AllTabs.Width / AllTabs.TabCount) - 2, 0);
+            if(AllTabs.Width > 0)
+            {
+                AllTabs.ItemSize = new Size((AllTabs.Width / AllTabs.TabCount) - 2, 0);
+            }     
         }
 
         private void Informants_Click(object sender, EventArgs e)
@@ -140,6 +150,31 @@ namespace Sherlock_Holmes_Text_Adventure
             if (NewspaperTab != null && MouseButtonPressed.Button == MouseButtons.Right)
             {
                 NewspaperTab.DragMap(e.X, e.Y);
+            }
+        }
+
+        private void AllTabs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(AllTabs.SelectedTab == AllTabs.TabPages["EndQuestions"])
+            {
+                if (!QuestionsTab.IsPlayerReady())
+                {
+                    //If the player says they are not ready, return to the tab they were on
+                    AllTabs.SelectedTab = AllTabs.TabPages[CurrentTabPage];
+                }
+                else
+                {
+                    int x = AllTabs.TabCount - 1;
+                    for (int i = 0; i < x; i++)
+                    {
+                        AllTabs.TabPages.RemoveAt(0);
+                    }
+                }
+            }
+            else
+            {
+                //Update what tab the player is at
+                CurrentTabPage = AllTabs.SelectedTab.Name;
             }
         }
     }
