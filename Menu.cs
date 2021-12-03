@@ -29,7 +29,7 @@ namespace Sherlock_Holmes_Text_Adventure
             NotesTab = new Notes(dbLayoutPanel27, label35);
             DirectoryTab = new Directory(dbLayoutPanel30,dbLayoutPanel31, LocationFinder, NotesTab, NumbersComboBox, DistrictComboBox);
             NewspaperTab = new Newspaper(NewspaperFront, NewspaperBack);
-            QuestionsTab = new EndQuestions(FirstSeriesQPAPanel, SecondSeriesQPA, FirstSeriesAnswers, SecondSeriesAnswers);
+            QuestionsTab = new EndQuestions(FirstSeriesQPAPanel, SecondSeriesQPA, FirstSeriesAnswers, SecondSeriesAnswers, NotesTab, PointsEarnedLabel);
 
             //Resize the tabs to fit properly
             Menu_Resize(null, null);
@@ -176,6 +176,13 @@ namespace Sherlock_Holmes_Text_Adventure
                 //Update what tab the player is at
                 CurrentTabPage = AllTabs.SelectedTab.Name;
             }
+        }
+
+        private void QuestionSubmitButton_Click(object sender, EventArgs e)
+        {
+            Button SubButton = (Button)sender;
+            SubButton.Enabled = false;
+            QuestionsTab.SubmitAnswers();
         }
     }
 }

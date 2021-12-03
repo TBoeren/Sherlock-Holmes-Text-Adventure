@@ -9,6 +9,7 @@ namespace Sherlock_Holmes_Text_Adventure
         private Dictionary<string, string> LocationInformation = new Dictionary<string, string>();
         private DBLayoutPanel NotesPanel;
         private Label InformationTextLabel;
+        public int TotalLeadsFollowed { get; set; }
 
         public Notes(DBLayoutPanel panel, Label label)
         {
@@ -40,7 +41,8 @@ namespace Sherlock_Holmes_Text_Adventure
                     NotesPanel.Controls.Add(label, i, NotesPanel.RowCount - 1);
                 }
 
-                TravelLocation NewLocation = new TravelLocation(RowElements[2]);
+                TotalLeadsFollowed++;
+                TravelLocation NewLocation = new TravelLocation(RowElements[2], " ");
                 NewLocation.Show();
             }
             else

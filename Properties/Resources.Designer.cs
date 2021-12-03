@@ -248,6 +248,15 @@ namespace Sherlock_Holmes_Text_Adventure.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to We all gather in Mrs Hudsonâ€™s living room. On the coffee table, there is a vase with a bunch of violets. In a corner of the room, a dog is eating meat from a bowl, paying no attention to us. Holmes starts without preamble:â€œAn easy case to solve. A letter, with no ransom demand, A very considerate culprit, or anxious not to draw attention. A discreet abduction during the usual walk of our client: this most probably points to a close acquaintance. The nephew, reporter at the Times? Given the article on th [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Outro {
+            get {
+                return ResourceManager.GetString("Outro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Pike {
@@ -293,9 +302,9 @@ namespace Sherlock_Holmes_Text_Adventure.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to Question;Possible Answers;Answer
-        ///Who abducted Charly?;Yvonne Nance? The nightwatch? Grosvenor Investments? Howard Parker? Stuart Oppenheimer? Oscar Teevan? Patrick Hennessy;Howard Parker
-        ///Why?;To discreetly enter the Grosvenor Investments? Money Extortion from Mrs Nance? To be eaten? To replace his lost pet? ;To discreetly enter the Grosvenor Investments
-        ///Where is Charly?;Baker Meat? Cannon? Chinese Wonders? At Howard Parker&apos;s? At Stuart Oppenheimer&apos;s? At Patrick Henessy&apos;s? At Grosvenor Investment&apos;s;At How [rest of string was truncated]&quot;;.
+        ///1. Who abducted Charly?;Yvonne Nance?The nightwatch?Grosvenor Investments?Howard Parker?Stuart Oppenheimer?Oscar Teevan?Patrick Hennessy;Howard Parker
+        ///2. Why?;To discreetly enter the Grosvenor Investments?Money Extortion from Mrs Nance?To be eaten?To replace his lost pet;To discreetly enter the Grosvenor Investments
+        ///3. Where is Charly?;Baker Meat?Cannon?Chinese Wonders?At Howard Parker&apos;s?At Stuart Oppenheimer&apos;s?At Patrick Henessy&apos;s?At Grosvenor Investment&apos;s;At Howard Park [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SherlockQuestions {
             get {

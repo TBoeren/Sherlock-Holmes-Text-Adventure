@@ -151,6 +151,8 @@
             this.dbLayoutPanel37 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.FirstSeriesQPAPanel = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.FirstSeriesAnswers = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.dbLayoutPanel39 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.PointsEarnedLabel = new System.Windows.Forms.Label();
             this.QuestionSubmitButton = new System.Windows.Forms.Button();
             this.WorldMapPanel.SuspendLayout();
             this.AllTabs.SuspendLayout();
@@ -228,6 +230,7 @@
             this.dbLayoutPanel36.SuspendLayout();
             this.dbLayoutPanel38.SuspendLayout();
             this.dbLayoutPanel37.SuspendLayout();
+            this.dbLayoutPanel39.SuspendLayout();
             this.SuspendLayout();
             // 
             // WorldMapPanel
@@ -1939,7 +1942,7 @@
             this.dbLayoutPanel36.Controls.Add(this.label38, 0, 0);
             this.dbLayoutPanel36.Controls.Add(this.label39, 0, 2);
             this.dbLayoutPanel36.Controls.Add(this.dbLayoutPanel37, 0, 1);
-            this.dbLayoutPanel36.Controls.Add(this.QuestionSubmitButton, 0, 4);
+            this.dbLayoutPanel36.Controls.Add(this.dbLayoutPanel39, 0, 4);
             this.dbLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbLayoutPanel36.Location = new System.Drawing.Point(3, 65);
             this.dbLayoutPanel36.Name = "dbLayoutPanel36";
@@ -1986,7 +1989,6 @@
             // SecondSeriesAnswers
             // 
             this.SecondSeriesAnswers.AutoSize = true;
-            this.SecondSeriesAnswers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SecondSeriesAnswers.ColumnCount = 1;
             this.SecondSeriesAnswers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SecondSeriesAnswers.Dock = System.Windows.Forms.DockStyle.Top;
@@ -2059,7 +2061,6 @@
             // FirstSeriesAnswers
             // 
             this.FirstSeriesAnswers.AutoSize = true;
-            this.FirstSeriesAnswers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.FirstSeriesAnswers.ColumnCount = 1;
             this.FirstSeriesAnswers.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.FirstSeriesAnswers.Dock = System.Windows.Forms.DockStyle.Top;
@@ -2070,15 +2071,43 @@
             this.FirstSeriesAnswers.Size = new System.Drawing.Size(301, 0);
             this.FirstSeriesAnswers.TabIndex = 1;
             // 
+            // dbLayoutPanel39
+            // 
+            this.dbLayoutPanel39.ColumnCount = 2;
+            this.dbLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.dbLayoutPanel39.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.dbLayoutPanel39.Controls.Add(this.PointsEarnedLabel, 0, 0);
+            this.dbLayoutPanel39.Controls.Add(this.QuestionSubmitButton, 1, 0);
+            this.dbLayoutPanel39.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dbLayoutPanel39.Location = new System.Drawing.Point(3, 501);
+            this.dbLayoutPanel39.Name = "dbLayoutPanel39";
+            this.dbLayoutPanel39.RowCount = 1;
+            this.dbLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.dbLayoutPanel39.Size = new System.Drawing.Size(1227, 52);
+            this.dbLayoutPanel39.TabIndex = 5;
+            // 
+            // PointsEarnedLabel
+            // 
+            this.PointsEarnedLabel.AutoSize = true;
+            this.PointsEarnedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PointsEarnedLabel.Font = new System.Drawing.Font("IM FELL English", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PointsEarnedLabel.Location = new System.Drawing.Point(0, 0);
+            this.PointsEarnedLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.PointsEarnedLabel.Name = "PointsEarnedLabel";
+            this.PointsEarnedLabel.Size = new System.Drawing.Size(920, 52);
+            this.PointsEarnedLabel.TabIndex = 7;
+            this.PointsEarnedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // QuestionSubmitButton
             // 
             this.QuestionSubmitButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.QuestionSubmitButton.Location = new System.Drawing.Point(1155, 501);
+            this.QuestionSubmitButton.Location = new System.Drawing.Point(1149, 3);
             this.QuestionSubmitButton.Name = "QuestionSubmitButton";
-            this.QuestionSubmitButton.Size = new System.Drawing.Size(75, 52);
-            this.QuestionSubmitButton.TabIndex = 5;
+            this.QuestionSubmitButton.Size = new System.Drawing.Size(75, 46);
+            this.QuestionSubmitButton.TabIndex = 6;
             this.QuestionSubmitButton.Text = "Submit";
             this.QuestionSubmitButton.UseVisualStyleBackColor = true;
+            this.QuestionSubmitButton.Click += new System.EventHandler(this.QuestionSubmitButton_Click);
             // 
             // Menu
             // 
@@ -2204,6 +2233,8 @@
             this.dbLayoutPanel38.PerformLayout();
             this.dbLayoutPanel37.ResumeLayout(false);
             this.dbLayoutPanel37.PerformLayout();
+            this.dbLayoutPanel39.ResumeLayout(false);
+            this.dbLayoutPanel39.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2331,6 +2362,8 @@
         private DBLayoutPanel FirstSeriesQPAPanel;
         private DBLayoutPanel SecondSeriesAnswers;
         private DBLayoutPanel FirstSeriesAnswers;
+        private DBLayoutPanel dbLayoutPanel39;
+        private System.Windows.Forms.Label PointsEarnedLabel;
         private System.Windows.Forms.Button QuestionSubmitButton;
     }
 }
