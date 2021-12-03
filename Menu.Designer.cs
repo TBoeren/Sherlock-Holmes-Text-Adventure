@@ -2116,6 +2116,7 @@
             this.ClientSize = new System.Drawing.Size(1247, 650);
             this.Controls.Add(this.WorldMapPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
             this.Text = "Sherlock Holmes Consulting Detective";
             this.Load += new System.EventHandler(this.Form1_Load);
