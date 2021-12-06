@@ -2,7 +2,7 @@
 A text adventure in C# winforms based on the sherlock holmes consulting detective boardgame.
 I wanted to try my hand a bit at software development.
 
-- If you just want to play the game, Download the Release.zip
+- If you just want to play the game, Download the Release.zip and play
 
 ## Making your own case
 
