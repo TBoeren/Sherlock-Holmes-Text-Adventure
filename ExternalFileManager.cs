@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Sherlock_Holmes_Text_Adventure
 {
-    internal class ExternalFileManager : IExternalFilesManager
+    internal class ExternalFileManager
     {
         public DataTable ConvertCSVToDatatable(string FileName)
         {
@@ -36,7 +33,7 @@ namespace Sherlock_Holmes_Text_Adventure
                 for (int f = 0; f < Cols; f++)
                 {
                     //Add a new line in place of the @ for text formatting purposes
-                    Fields[f] = Fields[f].Replace("@", System.Environment.NewLine);
+                    Fields[f] = Fields[f].Replace("@", Environment.NewLine);
                     Row[f] = Fields[f];
                 }
                 DatatableToStore.Rows.Add(Row);

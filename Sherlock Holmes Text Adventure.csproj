@@ -58,7 +58,6 @@
     <Compile Include="CaseLocationDatabase.cs" />
     <Compile Include="EndQuestions.cs" />
     <Compile Include="ExternalFileManager.cs" />
-    <Compile Include="IExternalFilesManager.cs" />
     <Compile Include="Intro.cs" />
     <Compile Include="Newspaper.cs" />
     <Compile Include="NotesLabel.cs">

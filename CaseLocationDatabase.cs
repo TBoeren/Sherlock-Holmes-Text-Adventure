@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.IO;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Sherlock_Holmes_Text_Adventure
@@ -13,6 +10,7 @@ namespace Sherlock_Holmes_Text_Adventure
 
         public CaseLocationDatabase()
         {
+            //Get the locations for the case from the csv and port it to a datatable
             ExternalFileManager FilesManager = new ExternalFileManager();
             CaseLocationsDatatable = FilesManager.ConvertCSVToDatatable("SherlockLocations.csv");
         }

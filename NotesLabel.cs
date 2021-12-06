@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Sherlock_Holmes_Text_Adventure
@@ -8,7 +7,7 @@ namespace Sherlock_Holmes_Text_Adventure
     {
         public string LocationID { get; }
 
-        public string LocationName { get;}
+        public string LocationName { get; }
 
         public NotesLabel(string name, string location)
         {

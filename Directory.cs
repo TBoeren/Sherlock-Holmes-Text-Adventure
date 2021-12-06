@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sherlock_Holmes_Text_Adventure
@@ -24,6 +20,7 @@ namespace Sherlock_Holmes_Text_Adventure
 
         public Directory(DBLayoutPanel DPanel, DBLayoutPanel BPanel, CaseLocationDatabase CaseDB, Notes notes, ComboBox Numbers, ComboBox Districts)
         {
+            //Set all the required variables
             DirectoryPanel = DPanel;
             ButtonPanel = BPanel;
             CaseLocations = CaseDB;
@@ -32,6 +29,7 @@ namespace Sherlock_Holmes_Text_Adventure
             DropdownNumbers = Numbers;
             DropdownDistricts = Districts;
 
+            //Populate the button table and the manual travel comboboxes. Also set the data table
             SetupManualTravel();
             CreateLetterButtons();
             DirectoryDatatable = FileManager.ConvertCSVToDatatable("London Directory.csv");
@@ -63,7 +61,8 @@ namespace Sherlock_Holmes_Text_Adventure
                 LetterButton.Dock = DockStyle.Fill;
                 LetterButton.Text = Alphabet[i].ToString();
                 LetterButton.Click += OnLetterButtonPressed;
-
+                
+                //Add the button to the correct column
                 if (i > (Alphabet.Length / 2) - 1)
                 {
                     ButtonPanel.Controls.Add(LetterButton, 1, (i - ButtonPanel.RowCount));
@@ -129,6 +128,7 @@ namespace Sherlock_Holmes_Text_Adventure
         {
             DirectoryPanel.SuspendLayout();
 
+            //Clear the layout panel except for the first entry
             int X = 1;
             while (X <= DirectoryPanel.RowCount - 2)
             {
@@ -138,6 +138,7 @@ namespace Sherlock_Holmes_Text_Adventure
                 c.Dispose();
                 DirectoryPanel.RowCount--;
             }
+
             //Update the autoscroll
             DirectoryPanel.AutoScroll = false;
             DirectoryPanel.ResumeLayout(false);
@@ -209,7 +210,6 @@ namespace Sherlock_Holmes_Text_Adventure
                 Names.Add(Row["address"].ToString());
             }
 
-            bindingSource.RemoveFilter();
             return Names.ToArray();
         }
 
@@ -218,12 +218,14 @@ namespace Sherlock_Holmes_Text_Adventure
             NotesLabel SelectedLabel = (NotesLabel)sender;
             string[] LocationInfo = CaseLocations.FindLocationArray(SelectedLabel.LocationID);
 
+            //Check if the selected location is relevant to the current case. If so, add it!
             if (LocationInfo.Length > 0)
             {
                 CaseNotes.StoreNotes(LocationInfo);
             }
             else
             {
+                //If it is irrelevant, note the location and that it is irrelevant to the case
                 List<string> IrrelevantLocationInfo = new List<string>();
 
                 if (SelectedLabel.LocationID != "")
@@ -273,7 +275,7 @@ namespace Sherlock_Holmes_Text_Adventure
                 else
                 {
                     MessageBox.Show("This location does not exist", "Note");
-                }      
+                }
             }
         }
     }

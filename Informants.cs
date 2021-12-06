@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -19,7 +18,7 @@ namespace Sherlock_Holmes_Text_Adventure
             LocationFinder = finder;
 
             //Create the dictionary which is used when the informants images are selected
-            InformantDictionary.Add(new Point(0, 0), LocationFinder.FindLocationArray("5WC")); 
+            InformantDictionary.Add(new Point(0, 0), LocationFinder.FindLocationArray("5WC"));
             InformantDictionary.Add(new Point(1, 0), LocationFinder.FindLocationArray("42NW"));
             InformantDictionary.Add(new Point(2, 0), LocationFinder.FindLocationArray("5SW"));
             InformantDictionary.Add(new Point(3, 0), LocationFinder.FindLocationArray("38EC"));

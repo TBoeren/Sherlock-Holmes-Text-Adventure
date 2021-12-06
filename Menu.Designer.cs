@@ -40,11 +40,11 @@
             this.WorldMapImage = new System.Windows.Forms.PictureBox();
             this.Directory = new System.Windows.Forms.TabPage();
             this.dbLayoutPanel28 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
-            this.dbLayoutPanel30 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.DirectoryLayoutPanel = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.dbLayoutPanel29 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
-            this.dbLayoutPanel31 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.ButtonLayoutPanel = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.directoryButton1 = new System.Windows.Forms.Button();
             this.dbLayoutPanel33 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.dbLayoutPanel34 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
@@ -60,7 +60,7 @@
             this.Informants = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.tableLayoutPanel2 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
-            this.tableLayoutPanel3 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.InformantsTableLayout = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.dbLayoutPanel1 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.dbLayoutPanel2 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.label6 = new System.Windows.Forms.Label();
@@ -135,10 +135,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Notes = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dbLayoutPanel27 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
+            this.NotesTableLayout = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
+            this.NotesLocationLabel = new System.Windows.Forms.Label();
             this.EndQuestions = new System.Windows.Forms.TabPage();
             this.dbLayoutPanel35 = new Sherlock_Holmes_Text_Adventure.DBLayoutPanel(this.components);
             this.label41 = new System.Windows.Forms.Label();
@@ -162,7 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.WorldMapImage)).BeginInit();
             this.Directory.SuspendLayout();
             this.dbLayoutPanel28.SuspendLayout();
-            this.dbLayoutPanel30.SuspendLayout();
+            this.DirectoryLayoutPanel.SuspendLayout();
             this.dbLayoutPanel29.SuspendLayout();
             this.dbLayoutPanel33.SuspendLayout();
             this.dbLayoutPanel34.SuspendLayout();
@@ -178,7 +178,7 @@
             this.Informants.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.InformantsTableLayout.SuspendLayout();
             this.dbLayoutPanel1.SuspendLayout();
             this.dbLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -224,7 +224,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.dbLayoutPanel27.SuspendLayout();
+            this.NotesTableLayout.SuspendLayout();
             this.EndQuestions.SuspendLayout();
             this.dbLayoutPanel35.SuspendLayout();
             this.dbLayoutPanel36.SuspendLayout();
@@ -359,7 +359,7 @@
             this.dbLayoutPanel28.ColumnCount = 2;
             this.dbLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.dbLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.dbLayoutPanel28.Controls.Add(this.dbLayoutPanel30, 1, 0);
+            this.dbLayoutPanel28.Controls.Add(this.DirectoryLayoutPanel, 1, 0);
             this.dbLayoutPanel28.Controls.Add(this.dbLayoutPanel29, 0, 0);
             this.dbLayoutPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbLayoutPanel28.Location = new System.Drawing.Point(0, 0);
@@ -371,21 +371,21 @@
             // 
             // dbLayoutPanel30
             // 
-            this.dbLayoutPanel30.AutoScroll = true;
-            this.dbLayoutPanel30.AutoSize = true;
-            this.dbLayoutPanel30.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.dbLayoutPanel30.ColumnCount = 2;
-            this.dbLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel30.Controls.Add(this.label36, 0, 0);
-            this.dbLayoutPanel30.Controls.Add(this.label37, 0, 0);
-            this.dbLayoutPanel30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dbLayoutPanel30.Location = new System.Drawing.Point(126, 3);
-            this.dbLayoutPanel30.Name = "dbLayoutPanel30";
-            this.dbLayoutPanel30.RowCount = 1;
-            this.dbLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.dbLayoutPanel30.Size = new System.Drawing.Size(1110, 618);
-            this.dbLayoutPanel30.TabIndex = 1;
+            this.DirectoryLayoutPanel.AutoScroll = true;
+            this.DirectoryLayoutPanel.AutoSize = true;
+            this.DirectoryLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.DirectoryLayoutPanel.ColumnCount = 2;
+            this.DirectoryLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.DirectoryLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.DirectoryLayoutPanel.Controls.Add(this.label36, 0, 0);
+            this.DirectoryLayoutPanel.Controls.Add(this.label37, 0, 0);
+            this.DirectoryLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DirectoryLayoutPanel.Location = new System.Drawing.Point(126, 3);
+            this.DirectoryLayoutPanel.Name = "dbLayoutPanel30";
+            this.DirectoryLayoutPanel.RowCount = 1;
+            this.DirectoryLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.DirectoryLayoutPanel.Size = new System.Drawing.Size(1110, 618);
+            this.DirectoryLayoutPanel.TabIndex = 1;
             // 
             // label36
             // 
@@ -417,7 +417,7 @@
             // 
             this.dbLayoutPanel29.ColumnCount = 1;
             this.dbLayoutPanel29.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.dbLayoutPanel29.Controls.Add(this.dbLayoutPanel31, 0, 0);
+            this.dbLayoutPanel29.Controls.Add(this.ButtonLayoutPanel, 0, 0);
             this.dbLayoutPanel29.Controls.Add(this.directoryButton1, 0, 1);
             this.dbLayoutPanel29.Controls.Add(this.dbLayoutPanel33, 0, 2);
             this.dbLayoutPanel29.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -432,28 +432,28 @@
             // 
             // dbLayoutPanel31
             // 
-            this.dbLayoutPanel31.ColumnCount = 2;
-            this.dbLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dbLayoutPanel31.Location = new System.Drawing.Point(3, 3);
-            this.dbLayoutPanel31.Name = "dbLayoutPanel31";
-            this.dbLayoutPanel31.RowCount = 13;
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
-            this.dbLayoutPanel31.Size = new System.Drawing.Size(111, 488);
-            this.dbLayoutPanel31.TabIndex = 1;
+            this.ButtonLayoutPanel.ColumnCount = 2;
+            this.ButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ButtonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ButtonLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.ButtonLayoutPanel.Name = "dbLayoutPanel31";
+            this.ButtonLayoutPanel.RowCount = 13;
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308F));
+            this.ButtonLayoutPanel.Size = new System.Drawing.Size(111, 488);
+            this.ButtonLayoutPanel.TabIndex = 1;
             // 
             // directoryButton1
             // 
@@ -656,7 +656,7 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.InformantsTableLayout, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 65);
@@ -669,31 +669,31 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 5;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.dbLayoutPanel1, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dbLayoutPanel3, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dbLayoutPanel4, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dbLayoutPanel5, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dbLayoutPanel6, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dbLayoutPanel7, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.dbLayoutPanel8, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.dbLayoutPanel9, 3, 1);
-            this.tableLayoutPanel3.Controls.Add(this.dbLayoutPanel10, 4, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 86);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1227, 467);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.InformantsTableLayout.ColumnCount = 5;
+            this.InformantsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.InformantsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.InformantsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.InformantsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.InformantsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.InformantsTableLayout.Controls.Add(this.dbLayoutPanel1, 0, 1);
+            this.InformantsTableLayout.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.InformantsTableLayout.Controls.Add(this.dbLayoutPanel3, 1, 0);
+            this.InformantsTableLayout.Controls.Add(this.dbLayoutPanel4, 2, 0);
+            this.InformantsTableLayout.Controls.Add(this.dbLayoutPanel5, 3, 0);
+            this.InformantsTableLayout.Controls.Add(this.dbLayoutPanel6, 4, 0);
+            this.InformantsTableLayout.Controls.Add(this.dbLayoutPanel7, 1, 1);
+            this.InformantsTableLayout.Controls.Add(this.dbLayoutPanel8, 2, 1);
+            this.InformantsTableLayout.Controls.Add(this.dbLayoutPanel9, 3, 1);
+            this.InformantsTableLayout.Controls.Add(this.dbLayoutPanel10, 4, 1);
+            this.InformantsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InformantsTableLayout.Location = new System.Drawing.Point(3, 86);
+            this.InformantsTableLayout.Name = "tableLayoutPanel3";
+            this.InformantsTableLayout.RowCount = 2;
+            this.InformantsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.InformantsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.InformantsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.InformantsTableLayout.Size = new System.Drawing.Size(1227, 467);
+            this.InformantsTableLayout.TabIndex = 0;
             // 
             // dbLayoutPanel1
             // 
@@ -1826,13 +1826,13 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
-            this.splitContainer1.Panel1.Controls.Add(this.dbLayoutPanel27);
+            this.splitContainer1.Panel1.Controls.Add(this.NotesTableLayout);
             this.splitContainer1.Panel1.Font = new System.Drawing.Font("IM FELL English", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
-            this.splitContainer1.Panel2.Controls.Add(this.label35);
+            this.splitContainer1.Panel2.Controls.Add(this.NotesLocationLabel);
             this.splitContainer1.Panel2.Font = new System.Drawing.Font("IM FELL English", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer1.Size = new System.Drawing.Size(1239, 624);
             this.splitContainer1.SplitterDistance = 413;
@@ -1840,22 +1840,22 @@
             // 
             // dbLayoutPanel27
             // 
-            this.dbLayoutPanel27.AutoScroll = true;
-            this.dbLayoutPanel27.AutoSize = true;
-            this.dbLayoutPanel27.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.dbLayoutPanel27.ColumnCount = 2;
-            this.dbLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.dbLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.dbLayoutPanel27.Controls.Add(this.label34, 0, 0);
-            this.dbLayoutPanel27.Controls.Add(this.label33, 0, 0);
-            this.dbLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dbLayoutPanel27.Location = new System.Drawing.Point(0, 0);
-            this.dbLayoutPanel27.Name = "dbLayoutPanel27";
-            this.dbLayoutPanel27.RowCount = 1;
-            this.dbLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.dbLayoutPanel27.Size = new System.Drawing.Size(1239, 413);
-            this.dbLayoutPanel27.TabIndex = 0;
+            this.NotesTableLayout.AutoScroll = true;
+            this.NotesTableLayout.AutoSize = true;
+            this.NotesTableLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.NotesTableLayout.ColumnCount = 2;
+            this.NotesTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.NotesTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.NotesTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.NotesTableLayout.Controls.Add(this.label34, 0, 0);
+            this.NotesTableLayout.Controls.Add(this.label33, 0, 0);
+            this.NotesTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NotesTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.NotesTableLayout.Name = "dbLayoutPanel27";
+            this.NotesTableLayout.RowCount = 1;
+            this.NotesTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.NotesTableLayout.Size = new System.Drawing.Size(1239, 413);
+            this.NotesTableLayout.TabIndex = 0;
             // 
             // label34
             // 
@@ -1885,14 +1885,14 @@
             // 
             // label35
             // 
-            this.label35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label35.Font = new System.Drawing.Font("IM FELL English", 12F);
-            this.label35.Location = new System.Drawing.Point(0, 0);
-            this.label35.Margin = new System.Windows.Forms.Padding(0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(1239, 207);
-            this.label35.TabIndex = 0;
+            this.NotesLocationLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NotesLocationLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NotesLocationLabel.Font = new System.Drawing.Font("IM FELL English", 12F);
+            this.NotesLocationLabel.Location = new System.Drawing.Point(0, 0);
+            this.NotesLocationLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.NotesLocationLabel.Name = "label35";
+            this.NotesLocationLabel.Size = new System.Drawing.Size(1239, 207);
+            this.NotesLocationLabel.TabIndex = 0;
             // 
             // EndQuestions
             // 
@@ -2133,8 +2133,8 @@
             this.Directory.ResumeLayout(false);
             this.dbLayoutPanel28.ResumeLayout(false);
             this.dbLayoutPanel28.PerformLayout();
-            this.dbLayoutPanel30.ResumeLayout(false);
-            this.dbLayoutPanel30.PerformLayout();
+            this.DirectoryLayoutPanel.ResumeLayout(false);
+            this.DirectoryLayoutPanel.PerformLayout();
             this.dbLayoutPanel29.ResumeLayout(false);
             this.dbLayoutPanel33.ResumeLayout(false);
             this.dbLayoutPanel34.ResumeLayout(false);
@@ -2156,7 +2156,7 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
+            this.InformantsTableLayout.ResumeLayout(false);
             this.dbLayoutPanel1.ResumeLayout(false);
             this.dbLayoutPanel2.ResumeLayout(false);
             this.dbLayoutPanel2.PerformLayout();
@@ -2223,8 +2223,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.dbLayoutPanel27.ResumeLayout(false);
-            this.dbLayoutPanel27.PerformLayout();
+            this.NotesTableLayout.ResumeLayout(false);
+            this.NotesTableLayout.PerformLayout();
             this.EndQuestions.ResumeLayout(false);
             this.dbLayoutPanel35.ResumeLayout(false);
             this.dbLayoutPanel35.PerformLayout();
@@ -2253,7 +2253,7 @@
         private System.Windows.Forms.TabPage Intro;
         private DBLayoutPanel tableLayoutPanel1;
         private DBLayoutPanel tableLayoutPanel2;
-        private DBLayoutPanel tableLayoutPanel3;
+        private DBLayoutPanel InformantsTableLayout;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private DBLayoutPanel tableLayoutPanel4;
@@ -2327,18 +2327,18 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private DBLayoutPanel dbLayoutPanel27;
+        private DBLayoutPanel NotesTableLayout;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label NotesLocationLabel;
         private System.Windows.Forms.TabPage Directory;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private DBLayoutPanel dbLayoutPanel28;
-        private DBLayoutPanel dbLayoutPanel30;
+        private DBLayoutPanel DirectoryLayoutPanel;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private DBLayoutPanel dbLayoutPanel29;
-        private DBLayoutPanel dbLayoutPanel31;
+        private DBLayoutPanel ButtonLayoutPanel;
         private System.Windows.Forms.Button directoryButton1;
         private DBLayoutPanel dbLayoutPanel32;
         private System.Windows.Forms.Label CaseIntroText;

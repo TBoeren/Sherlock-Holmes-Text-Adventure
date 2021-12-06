@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sherlock_Holmes_Text_Adventure
 {
+    //This tablelayout has been modified to be double buffered (this is to speed up loading) and to only become visible when everything has been loaded in
     public partial class DBLayoutPanel : TableLayoutPanel
     {
         public DBLayoutPanel()

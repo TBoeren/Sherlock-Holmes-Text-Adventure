@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sherlock_Holmes_Text_Adventure
@@ -83,6 +79,7 @@ namespace Sherlock_Holmes_Text_Adventure
             foreach (var item in bindingSource)
             {
                 DataRowView Row = (DataRowView)item;
+                //Check if the current row of questions belongs to the first or second series and add them
                 if (!SecondSeries)
                 {
                     if (Row["question"].ToString() == "-" && Row["answer"].ToString() == "-")
@@ -100,7 +97,6 @@ namespace Sherlock_Holmes_Text_Adventure
                     SecondSeriesQuestionList.Add(Row["possible answers"].ToString());
                     PossiblePoints.Add(int.Parse(Row["points"].ToString()));
                 }
-
                 AllAnswers.Add(Row["answer"].ToString());
             }
 
@@ -160,7 +156,9 @@ namespace Sherlock_Holmes_Text_Adventure
         private void CalculateScore(object sender, FormClosedEventArgs e)
         {
             int TotalPointsEarned = 0;
+            int TotalLeadsFollowed = CaseNotes.TotalLeadsFollowed;
 
+            //Check if the answers are correct. If they are, update the visual and add the score
             for (int i = 0; i < PossiblePoints.Count; i++)
             {
                 if (AllAnswers[i] == AllComboBoxes[i].Text)
@@ -173,19 +171,19 @@ namespace Sherlock_Holmes_Text_Adventure
                     AllQuestions[i].ForeColor = Color.Red;
                 }
             }
-
+            //Disable the combo boxes. Otherwise you can change the combobox after getting the answers
             foreach (var item in AllComboBoxes)
             {
                 item.Enabled = false;
             }
 
-            if(CaseNotes.TotalLeadsFollowed > LeadsFollowed)
+            if (TotalLeadsFollowed > LeadsFollowed)
             {
-                int x = CaseNotes.TotalLeadsFollowed - LeadsFollowed;
-                x = x * 5;
+                int x = TotalLeadsFollowed - LeadsFollowed;
+                x *= 5;
                 TotalPointsEarned -= x;
             }
-
+            //After all the calculations, prin the score
             PointsEarnedLabel.Text = "You earned: " + TotalPointsEarned + "points!";
         }
 
@@ -207,6 +205,7 @@ namespace Sherlock_Holmes_Text_Adventure
                 AnswerLabel.ResumeLayout(false);
             }
 
+            //Print second series answers
             for (int i = 0; i < (SecondSeriesPanel.RowCount / 2); i++)
             {
                 Label AnswerLabel = new Label();
@@ -226,4 +225,3 @@ namespace Sherlock_Holmes_Text_Adventure
         }
     }
 }
-
